@@ -1,0 +1,203 @@
+@import '../GeneralSetting/general';
+
+
+/* Loader at Index.html */  
+<<<<<<< HEAD
+/*.loader {  
+=======
+.loader {
+    font-family: $font-family-1;
+    text-align: center; 
+    width: 100%; 
+    height: 2000px;
+>>>>>>> parent of 8bde9bf... animation of loader
+    position: fixed;
+    line-height: 500px;
+    background-color: rgba(200,200,200, 0.8);
+    
+    animation: loader 4s cubic-bezier(0.17, 0, 0.26, 1.02);
+
+    &_logo {  
+        color: linear-gradient(#7436bf, #e78bcd);
+<<<<<<< HEAD
+        animation: driving_on 4s forwards cubic-bezier(0.445, 0.05, 0.55, 0.95);   
+        transform: translate(50%);
+        .fa-truck-fast {
+            color: $--Primary-color;
+            animation: driving_on  6s linear;
+               
+=======
+        animation: driving_on 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) ease-in-out;   
+
+        .fa-truck-fast {
+            color: $--Primary-color;
+            animation: driving_on  6s linear;
+            
+            
+>>>>>>> parent of 8bde9bf... animation of loader
+        }
+    } 
+
+    .loader_circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        margin: 10px;
+        background-color: $--Primary-color;   
+        animation-timing-function: steps(5, jump-start);     
+    }
+
+}
+    
+@keyframes driving_on {
+    30% {
+        transform: translateX(-1000%);
+        transition-property: all 1s;
+        
+              
+    }  
+
+    50% {
+        transform: translateX(-500%);
+        color: $--Primary-color;
+
+    }
+   
+    100% {
+        transform: translateX(0%);
+        color: $--Primary-color;
+             
+    }
+}
+
+@keyframes loader {
+    from {
+        opacityy: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
+*/
+
+/* ANIMATION HEART MainPage */   
+.heart {
+    cursor: pointer;
+
+}
+.heart_checkbox {
+    display:none;
+   }
+
+    label[for=heart] .heart_label {
+    font-size: 22px;
+         
+    }
+
+    label[for=heart] .fa_full {
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    opacity: 0;
+    transition: all;
+    transition-duration: 2s;
+    }
+
+   label[for=heart] .fa_empty {
+    color: $--Grey;
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    transition: color 1000ms ease-out;
+    }
+
+   label[for=heart]:hover .fa-heart {
+    color: $--seconde-color;
+    background-clip: text;
+    background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+    font-size: 25px;
+    opacity: 1; 
+    }
+
+    /*label[for=heart]:checked .fa-heart {
+        background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+        opacity: 1;
+    }*/
+
+/* ANIMATION HEART MenuPage */ 
+
+    /* ANIMATION HEART MenuPage */ 
+    #heart-2 {
+        display:none;
+    }
+
+    label[for=heart-2] .fa-heart {
+        font-size: 22px;
+        cursor: pointer;     
+        }
+    
+        label[for=heart-2] .fa-solid {
+        position: absolute;
+        top: 50px;
+        right: 44px;
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 2s;
+        }
+    
+       label[for=heart-2] .fa-regular {
+        color: $--Grey;
+        position: absolute;
+        top: 50px;
+        right: 44px;
+        transition: color 1000ms ease-out;
+        }
+    
+       label[for=heart-2]:hover .fa-heart {
+        color: $--seconde-color;
+        background-clip: text;
+        background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+        font-size: 25px;
+        opacity: 1; 
+        }
+    
+        label[for=heart]:checked .fa-heart {
+            background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+            opacity: 1;
+        }
+
+/* ANIMATION Rolling Item on MenuPage */ 
+/*.resto_menu {
+    &_option {            
+    
+        &:hover {
+            animation: slide_down 2s ease-both;
+            
+            .price {
+            animation: slide_down 2s linear;
+            }
+            .order {   
+            animation: slide_down 2s linear;    
+
+            .fa-check {
+                transform: rotate(-360deg);
+                transition: 2s ease-in-out;
+            }
+            }       
+        }
+    }   
+}   */
+@keyframes slide_down {
+    from {
+        transform: translateX(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }   
+}
+@mixin loading_menu {
+    opacity: 0;
+    animation: slide_down 8s linear;
+}

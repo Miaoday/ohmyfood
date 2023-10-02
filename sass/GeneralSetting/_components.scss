@@ -1,0 +1,38 @@
+
+//*BUTTON*//
+
+%btn {
+    
+    color:$--forth-color;
+    border-radius: 25px;
+    background: $--Button-Gradient;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 13px 18.75px;
+    border: 0;
+    cursor: pointer;
+    transform: scale(1);
+    opacity: 2; 
+}
+
+%btn-animated {
+    box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.4);
+    opacity: 0.9;
+    transform: scale(1.01);
+    transition: ease-in-out 100ms;
+}
+
+//*Heart*//
+%like-index {
+    color: $--fifth-color;   
+    position: absolute;
+    bottom: 30px;
+    right: 28px;
+    cursor: pointer;
+}
+%like-menu {
+    color: $--fifth-color; 
+    position: absolute;
+    top: 42px;  
+    right: 44px;
+    cursor: pointer;
+}

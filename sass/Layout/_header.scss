@@ -1,0 +1,39 @@
+//**Header**//
+//index//
+.header {
+    background-color: $--forth-color;
+    padding-bottom: 0.5px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    
+    &_logo {
+        font-family: $font-family-1;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 197px;
+        height: 36px;
+        padding: 0px 19px 0px 16px;
+        margin: 14px 90px 13px; 
+    }
+
+    i {
+        width: 30px;
+        color:$--Grey;
+        position: absolute;
+        left: 30px;
+        top: 35px;
+        cursor: pointer;
+    }
+
+    @include media-query("desktop-up") {
+
+        &_logo {
+            width: 200px;
+            height: 32px; 
+        }  
+    }
+}
+

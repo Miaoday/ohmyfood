@@ -1,0 +1,50 @@
+
+//*Footer*//
+.f {
+    background-color: $--Grey;
+    padding: 22px 25px;
+    position: sticky;
+
+    .h2-normal {
+        font-family: $font-family-1;
+        color: $--forth-color;
+        margin: 0;
+    }
+
+    &_content {
+        margin-bottom: 0;
+        padding: 0;        
+    }
+
+    .h4 {
+        font-family: $font-family-2;
+        font-weight: $font-weight2;
+        color: $--forth-color;
+        margin: 7px 0;
+    }
+
+    @include media-query("desktop-up") {
+        & {
+        height: 114px;
+        display: flex;
+        flex-flow: row-reverse;       
+        align-items: flex-end;       
+        }
+
+        .h2-normal {
+            font-family: $font-family-1;
+            color: $--forth-color;
+            margin: 0 16px;
+            padding: 3px;
+        }
+
+        &_content {
+            display: flex;
+            gap: 7px;
+        }
+
+        .h4 {
+            margin: 7px;
+        }
+    }
+}
