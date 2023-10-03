@@ -1,0 +1,32 @@
+//** COLOR **//
+$--Primary-color:#9356DC; 
+$--seconde-color:#FF79DA;
+$--third-color:#F6F6F6;
+$--forth-color:white;
+$--fifth-color:black;
+
+$--Grey: #353535;
+$--Grey-2: #EAEAEA;
+$--grey-tint-4: #7E7E7E;
+$--Green:#99E2D0;
+$--Green-2:#008766;
+$--Button-Gradient: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
+
+//****Font-Family****//
+$font-family-1: 'Shrikhand', cursive; 
+$font-family-2: 'Roboto', sans-serif;
+$font-weight1: 700;
+$font-weight2: 500;
+$font-weight3: 400;
+$font-weight4: 300;
+
+// Media Queries
+//**MediaQuery**//
+$breakpoints: (
+  "phone-down": 414px,
+  "tablet-up": 500px,
+  "tablet-down": 768px,
+  "desktop-up": 1024px,
+  "desktop-down": 1280px,
+  "widescreen-up": 1440px
+);

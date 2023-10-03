@@ -1,0 +1,86 @@
+@import '../utils/variables';
+
+/**  HEART  **/
+.heart {
+    cursor: pointer;
+
+}
+.heart_checkbox {
+    display:none;
+}
+
+    label[for=heart] .heart_label {
+    font-size: 22px;
+
+    }
+
+    label[for=heart] .fa_full {
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    opacity: 0;
+    transition: all;
+    transition-duration: 2s;
+    }
+
+label[for=heart] .fa_empty {
+    color: $--Grey;
+    position: absolute;
+    bottom: 35px;
+    right: 28px;
+    transition: color 1000ms ease-out;
+    }
+
+label[for=heart]:hover .fa-heart {
+    color: $--seconde-color;
+    background-clip: text;
+    background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+    font-size: 25px;
+    opacity: 1; 
+    }
+
+    /*label[for=heart]:checked .fa-heart {
+        background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+        opacity: 1;
+    }*/
+
+/* ANIMATION HEART MenuPage */ 
+
+    /* ANIMATION HEART MenuPage */ 
+    #heart-2 {
+        display:none;
+    }
+
+    label[for=heart-2] .fa-heart {
+        font-size: 22px;
+        cursor: pointer;     
+        }
+    
+        label[for=heart-2] .fa-solid {
+        position: absolute;
+        top: 50px;
+        right: 44px;
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 2s;
+        }
+label[for=heart-2] .fa-regular {
+        color: $--Grey;
+        position: absolute;
+        top: 50px;
+        right: 44px;
+        transition: color 1000ms ease-out;
+        }
+    
+       label[for=heart-2]:hover .fa-heart {
+        color: $--seconde-color;
+        background-clip: text;
+        background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+        font-size: 25px;
+        opacity: 1; 
+        }
+    
+        label[for=heart]:checked .fa-heart {
+            background: linear-gradient($--Primary-color 80%, $--seconde-color 100%);
+            opacity: 1;
+        }

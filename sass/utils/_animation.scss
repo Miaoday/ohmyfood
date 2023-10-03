@@ -1,0 +1,19 @@
+/* ANIMATION HEART MainPage */   
+
+/* ANIMATION Rolling Item on MenuPage */ 
+
+
+@keyframes slide_down {
+    from {
+        transform: translateX(60%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }   
+}
+@mixin loading_menu {
+    opacity: 0;
+    animation: slide_down 8s linear;
+}

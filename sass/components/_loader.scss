@@ -1,0 +1,62 @@
+
+/* Loader at Index.html */  
+.loader {
+    font-family: $font-family-1;
+    text-align: center; 
+    width: 100%; 
+    height: 2000px;
+    position: fixed;
+    line-height: 500px;
+    background-color: rgba(200,200,200, 0.8);
+    
+    animation: loader 4s cubic-bezier(0.17, 0, 0.26, 1.02);
+
+    &_logo {  
+        color: linear-gradient(#7436bf, #e78bcd);
+        animation: driving_on 4s forwards cubic-bezier(0.445, 0.05, 0.55, 0.95);   
+        transform: translate(50%);
+        .fa-truck-fast {
+            color: $--Primary-color;
+            animation: driving_on  6s linear;
+            animation: driving_on 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) ease-in-out;   
+
+            .fa-truck-fast {
+                color: $--Primary-color;
+                animation: driving_on  6s linear;
+        }
+    } 
+
+    .loader_circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+        margin: 10px;
+        background-color: $--Primary-color;   
+        animation-timing-function: steps(5, jump-start);     
+    }
+
+}
+    
+@keyframes driving_on {
+    30% {
+        transform: translateX(-1000%);
+        transition-property: all 1s;      
+    }  
+    50% {
+        transform: translateX(-500%);
+        color: $--Primary-color;
+    }
+    100% {
+        transform: translateX(0%);
+        color: $--Primary-color;           
+    }
+}
+
+@keyframes loader {
+    from {
+        opacityy: 0;
+    }
+    to {
+        opacity:1;
+    }
+}}

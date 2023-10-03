@@ -1,13 +1,25 @@
+// Variables, mixin, placeholder //
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/_placeholder';
+// Base Projet
+@import './base/typologie';
+
+// Components
+@import './components/loader';
+@import './components/banner';
+@import './components/buttons';
+@import './components/heart';
 
 
-@import './Layout/_banner';
-@import './Animation/_animation.scss';
-@import './GeneralSetting/_general.scss';
-@import './GeneralSetting/_components.scss';
-@import './Layout/_menu.scss';
-@import './Layout/_main.scss';
-@import './Layout/_header.scss';
-@import './Layout/_footer.scss';
+
+@import './pages/main';
+@import './pages/menu';
+@import './layout/header';
+@import './layout/footer';
+
+
+@import './utils/animation';
 
 
 
