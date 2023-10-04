@@ -1,6 +1,5 @@
 
-/**  HEART  **/
-
+/**  HEART  **/   
 .heart {    
 
   &_checkbox {
@@ -22,6 +21,7 @@
 
     &::before {
       background-image: $--Button-Gradient;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }

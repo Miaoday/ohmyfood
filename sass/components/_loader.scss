@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;       
     z-index: 5;   
-    animation: loader 10s ease-in-out;
+    animation: loader 4s ease-in-out;
     opacity: 0;
 
     &_logo { 
@@ -23,6 +23,7 @@
         155deg,  #9356dc -11.44%,
         #ff79da 123.93%
         );
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         
@@ -33,6 +34,7 @@
             190deg,  #9356dc -11.44%,
             #ff79da 123.93%
             );
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-inline-start: 20px;
