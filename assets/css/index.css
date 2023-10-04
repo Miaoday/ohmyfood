@@ -97,31 +97,39 @@ li {
 .loader {
   font-family: "Shrikhand", cursive;
   background: black;
+  position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed;
   z-index: 5;
-  animation: driving_on 100ms linear;
+  animation: loader 10s ease-in-out;
+  opacity: 0;
 }
 .loader_logo {
   font-size: 40px;
-  background-image: linear-gradient(-111deg, #9356dc -11.44%, #ff79da 123.93%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: flex;
   text-align: center;
   z-index: 10;
-  animation: driving_on 100ms linear;
+  background-image: linear-gradient(155deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.loader_logo_fa {
-  color: #9356DC;
-  margin: 20px;
-  animation: driving_on 6s linear;
-  animation: driving_on 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) ease-in-out;
+.loader_logo i {
+  background-image: linear-gradient(190deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-inline-start: 20px;
+  animation: driving_on 1s linear;
+}
+.loader_logo i i::before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  animation: bounce 0.5s ease-in-out infinite;
 }
 .loader_circle {
   width: 20px;
@@ -568,24 +576,75 @@ input[text] {
 }
 
 /* ANIMATION loader MainPage */
-@keyframes driving_on {
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
   30% {
-    transform: translateX(-1000%);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes driving_on {
+  0% {
+    transform: translateX(-300%);
+    transition-property: all 1s;
+  }
+  30% {
+    transform: translateX(-80%);
     transition-property: all 1s;
   }
   50% {
-    transform: translateX(-500%);
+    transform: translateX(-50%);
+    transition-property: all 1s;
+  }
+  70% {
+    transform: translateX(-30%);
+    transition-property: all 1s;
+  }
+  90% {
+    transform: translateX(-15%);
+    transition-property: all 1s;
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-5%);
+    transition-property: all 1s;
   }
 }
-@keyframes loader {
-  from {
-    opacityy: 0;
+@keyframes bounce {
+  0% {
+    transform: scale(1, 0.7);
   }
-  to {
-    opacity: 1;
+  40% {
+    transform: scale(0.8, 1.2);
+  }
+  60% {
+    transform: scale(1, 1);
+  }
+  100% {
+    bottom: 140px;
+  }
+}
+@keyframes driving_flash {
+  0% {
+    color: #9356DC;
+    box-shadow: 10px 10px 0.5px #7E7E7E;
+  }
+  90% {
+    color: #7E7E7E;
+    box-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    box-shadow: 10px 10px 0.5px #7E7E7E;
   }
 }
 /* ANIMATION Rolling checked on MenuPage */

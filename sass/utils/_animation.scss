@@ -1,25 +1,82 @@
 /* ANIMATION loader MainPage */   
-@keyframes driving_on {
+@keyframes loader {
+    0% {
+        opacity: 1;
+        
+    }
     30% {
-        transform: translateX(-1000%);
+        opacity:0.8;
+        
+    }
+    50% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;     
+    }
+}
+
+@keyframes driving_on {
+    0% {
+        transform: translateX(-300%);
+        transition-property: all 1s;      
+    }  
+    30% {
+        transform: translateX(-80%);
         transition-property: all 1s;      
     }  
     50% {
-        transform: translateX(-500%);
-        
+        transform: translateX(-50%);
+        transition-property: all 1s;
+    }
+    70% {
+        transform: translateX(-30%);
+        transition-property: all 1s;
+    }
+    90% {
+        transform: translateX(-15%);
+        transition-property: all 1s;                
     }
     100% {
-        transform: translateX(0%);
+        transform: translateX(-5%);
+        transition-property: all 1s;
                  
     }
 }
 
-@keyframes loader {
-    from {
-        opacityy: 0;
+@keyframes bounce {
+        0% {
+          transform: scale(1, 0.7);
+        }
+      
+        40% {
+          transform: scale(0.8, 1.2);
+        }
+      
+        60% {
+          transform: scale(1, 1);
+        }
+      
+        100% {
+          bottom: 140px;
+        }
+}      
+
+@keyframes driving_flash {
+    0% {
+        color: $--Primary-color;
+        box-shadow: 10px 10px .5px $--grey-tint-4;
     }
-    to {
-        opacity:1;
+    90% {
+        color: $--grey-tint-4;
+        box-shadow: none;
+    }
+    100% {
+        color: $--seconde-color;
+        box-shadow: 10px 10px .5px $--grey-tint-4;
     }
 }
 
