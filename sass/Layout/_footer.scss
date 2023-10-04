@@ -23,7 +23,7 @@
         margin: 7px 0;
     }
 
-    @include media-query("desktop-up") {
+    @include desktop-medium {
         & {
         height: 114px;
         display: flex;

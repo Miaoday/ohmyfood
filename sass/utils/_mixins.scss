@@ -1,6 +1,45 @@
-// Mixin Media Queries
-@mixin media-query($breakpoint) {
-    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
-      @content;
+
+
+
+//---Banner---//
+@mixin banner-images {
+    
+  width: 100%;
+  max-width: 1920px;
+  height: 275px;
+  object-fit: cover;
+  
+}
+
+//-- Mixin Media Queries--//
+
+@mixin phone {
+    @media screen and (min-width: map-get($breakpoints, phone-down)){
+        @content;
     }
+}
+
+@mixin tab {
+    @media screen and (min-width: map-get($breakpoints, tablet-down)){
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media screen and (min-width: map-get($breakpoints, desktop-up)){
+        @content;
+    }
+}
+
+@mixin desktop-large {
+  @media screen and (min-width: map-get($breakpoints, desktop-down)){
+      @content;
   }
+}
+
+@mixin widescreen {
+@media screen and (min-width: map-get(1920px, widescreen-up)){
+    @content;
+}
+}
+

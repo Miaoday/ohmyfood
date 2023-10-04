@@ -1,16 +1,16 @@
 // Variables, mixin, placeholder //
 @import './utils/variables';
 @import './utils/mixins';
-@import './utils/_placeholder';
+@import './utils/placeholder';
+
 // Base Projet
 @import './base/typologie';
 
 // Components
-@import './components/loader';
-@import './components/banner';
+@import './components/loader';;
+@import './components/cards';
 @import './components/buttons';
 @import './components/heart';
-
 
 
 @import './pages/main';

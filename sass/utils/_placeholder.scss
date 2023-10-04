@@ -1,3 +1,39 @@
+//**** Main Page ****//
+//*OperationButtons*//
+%steps {
+    display: flex;
+}
+
+%icon {
+    position: relative;
+}
+
+%step-btn {
+    border: solid $--third-color;
+    border-radius: 20px;
+    background-color: $--third-color;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+    padding: 28.59px 0px 28.12px 0px;
+}
+
+%numbers {
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $--forth-color;
+    font-family: $font-family-2;
+    width: 1.5em;
+    height: 1.5em;
+    font-style: normal;
+    font-weight: $font-weight2;
+    line-height: normal;
+    border: solid $--Primary-color;
+    background-color: $--Primary-color;
+    border-radius: 50px;
+    margin: 0;
+}
+
 
 
 
@@ -24,20 +60,4 @@
 }
 
 
- //*Heart*//
 
-%like-index {
-    color: $--fifth-color;   
-    position: absolute;
-    bottom: 30px;
-    right: 28px;
-    cursor: pointer;
-}
-
-%like-menu {
-    color: $--fifth-color; 
-    position: absolute;
-    top: 42px;  
-    right: 44px;
-    cursor: pointer;
-}

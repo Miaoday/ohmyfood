@@ -1,8 +1,29 @@
-/* ANIMATION HEART MainPage */   
+/* ANIMATION loader MainPage */   
+@keyframes driving_on {
+    30% {
+        transform: translateX(-1000%);
+        transition-property: all 1s;      
+    }  
+    50% {
+        transform: translateX(-500%);
+        
+    }
+    100% {
+        transform: translateX(0%);
+                 
+    }
+}
 
-/* ANIMATION Rolling Item on MenuPage */ 
+@keyframes loader {
+    from {
+        opacityy: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
 
-
+/* ANIMATION Rolling checked on MenuPage */ 
 @keyframes slide_down {
     from {
         transform: translateX(60%);

@@ -1,9 +1,7 @@
-@import '../base/typologie';
-@import '../utils/placeholder';
+//**** Main Page ****//
 
-
-//*Main Page*//
-//*icon Color*//
+//**general**//
+//*icon color*//
 .fa-location-dot {
     color: $--Grey;
 }
@@ -20,39 +18,6 @@
     color:$--Primary-color;
 }
 
-//**OperationButtons**//
-%steps {
-    display: flex;
-}
-%icon {
-    position: relative;
-}
-
-%step-btn {
-    border: solid $--third-color;
-    border-radius: 20px;
-    background-color: $--third-color;
-    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-    padding: 28.59px 0px 28.12px 0px;
-}
-
-%numbers {
-    right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: $--forth-color;
-    font-family: $font-family-2;
-    width: 1.5em;
-    height: 1.5em;
-    font-style: normal;
-    font-weight: $font-weight2;
-    line-height: normal;
-    border: solid $--Primary-color;
-    background-color: $--Primary-color;
-    border-radius: 50px;
-    margin: 0;
-}
 
 //**HeaderStyle**//
   h1 {
@@ -107,11 +72,6 @@
     font-weight: $font-weight2;
   }
 
-//**Greneral**//
-.main-container {
-    @extend %main-container;
-  }
-
 //***location**//
 .location {
 
@@ -139,7 +99,6 @@ input {
     }  
 }
   
-
 //***introduction**//
 .intro {
     text-align: center;
@@ -154,7 +113,7 @@ input {
         }
     }
 
-    @include media-query("desktop-up") {
+    @include desktop-medium {
         padding: 30px 0;
     }
 }   
@@ -179,7 +138,7 @@ input {
         @extend %numbers;
     }
 
-    @include media-query("desktop-up") {
+    @include desktop-medium {
 
         & {
             height: auto;
@@ -200,77 +159,24 @@ input {
     background: $--third-color;
     padding: 54px 20px;  
 
+    @include desktop-medium  {
+        /*height: 668px;*/
+        padding: 30px 180px;
+    }
+
     &_list {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        
-    
-    &_card {
-        display: flex;
-        flex-direction: column;
-        width: 100%;    
-        /*height: 251px;*/
-        background-color: $--forth-color;
-        border-radius: 15px;
-        margin-bottom: 18px;
-        position: relative;
-        /*transition: box-shadow, transform, 0.5s;*/
+        grid-template-rows: 1fr; 
 
-        &_img {       
-            display: flex;
-
-            .newtag {
-            font-family: $font-family-2;
-            font-size: 14px;
-            font-weight: $font-weight2;
-            position: absolute; 
-            right: 10px;
-            top: 10px;
-            width: 80px;
-            height: 29px;
-            text-align: center;
-            padding: 4px 6px 3px;
-            color: $--Green-2;
-            border: solid $--Green;
-            background-color: $--Green;
-            border-radius: 4px;
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-            }     
-
-            img {
-            width: 100%;
-            height: 231px;           
-            border-radius: 15px 15px 0 0;
-            object-fit: cover;
-            object-position: 50% 60%;
-            }
-        }
-
-        &_content {
-            display: flex;
-            flex-direction: row;
-        }
-    }
-
-    @include media-query("desktop-up") {
-        & {
-            /*height: 668px;*/
-            padding: 30px 180px;
-        }
-
-        &_list {
+         
+        @include desktop-medium  {     
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 25% 25%;
             gap: 100px;          
         }
+    }    
+}  
 
-        &_card {
-            margin-bottom: 100px;
-        }
-    }
-
-    } 
-}
 

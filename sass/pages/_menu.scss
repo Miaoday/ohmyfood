@@ -1,87 +1,70 @@
-//*Restaurant Menu Page*//
-//**General MenuPage**//
-%h2 {
-    font-size: 28px;
-    font-family: $font-family-1;
-    font-weight: $font-weight3;
-}
-
-%h3 {
-    font-family: $font-family-2;
-    font-size: 18px;
-    font-weight: $font-weight2;
-    margin: 0;
-}
-
-%h4 {
-    font-family: $font-family-2;
-    font-size: 16px;
-    font-weight: $font-weight4;
-}
-
-%p {
-    font-family: $font-family-2;
-    font-size: 15px;    
-}
-
-.main-container {
-    @extend %main-container;
-  }
+//**** Menu Page ****//
 
 //***banner image***//
 .banner {
-    img {
-        @include banner-images
-    }
+   img {
+   	@include banner-images;
+   }
 }
 
 //Menu Card*//
 .resto_menu {
-    display: flex;
-    flex-direction: column;
-    background-color: $--third-color;
-    border-radius: 45px 45px 0px 0px;
-    padding: 31px 17px 0;
-    position: relative;
-    bottom: 40px;
-    height: 1221px;
-    max-width: 1920px;
+   background-color: $--third-color;
+   border-radius: 45px 45px 0px 0px;
+   padding: 31px 17px 0;
+   position: relative;
+   bottom: 40px;  
+   max-width: 1920px;
 
-    @include media-query("tablet-down") {
-        margin-left: 13%;
-        margin-right: 13%;
-    }
+   @include tab {
+      margin-left: 13%;
+   	margin-right: 13%;
+   }
 
-    @include media-query("desktop-down") {
-        width: 1055px;
-        margin: auto;       
-    }
+   @include desktop-large {
+      width: 1055px;
+      margin: auto;       
+   }
+}
 
-    h2 {      
-        @extend %h2;
-        text-align: start;
-        margin: 0;
+.resto_title {
+	
+   h2 {      
+   	font-size: 28px;
+   	font-family: $font-family-1;
+   	font-weight: $font-weight3;
+      text-align: start;
+      margin: 0; 
+   }
 
-        @include media-query("desktop-down") {     
-                @extend %h2;
-                text-align: center;       
-        }
-    }
+   .heart {
+		display: flex;
+		
+      .fa_empty, 
+		.fa_full {
+			position: absolute;
+			top: 50px;
+			right: 46px;
+      }
+   }
+}
 
-    &_list {
-        width: 100%;
-        overflow: hidden;
+.meals_list {
 
-        h4 {
-            @extend %h4;
-            border-bottom: 3px solid $--Green;
-            width: 40px;
-            margin-top: 40px;
-            margin-bottom: 12px;
-        }
-    }
+   width: 100%;
+   overflow: hidden;
 
-    &_option {
+   &_title {
+   	font-family: $font-family-2;
+    	font-size: 16px;
+    	font-weight: $font-weight4;
+      border-bottom: 3px solid $--Green;
+      width: 40px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+   }
+
+   &_option {
         background-color: $--forth-color;
         border-radius: 15px;
         display: flex;             
@@ -90,8 +73,9 @@
         cursor: pointer;       
         width: 100%;
         overflow: hidden;
+
         &:hover .order {        
-            margin-right: 0.5%;    
+            margin-right: 0%;    
             .fa-check {
                 transform: rotate(-360deg);   
                 transition: 2s ease-in-out;  
@@ -108,39 +92,44 @@
             text-overflow: ellipsis;
 
             h3 {
-                @extend %h3;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                width: 60%;
+               font-family: $font-family-2;
+    				font-size: 18px;
+    				font-weight: $font-weight2;
+    				margin: 0;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               width: 60%;
             }
+
             .describe {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
 
                 p {
-                    @extend %p;
-                    font-weight: $font-weight4;
-                    margin: 0;
-                    width: 60%;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    
+						font-family: $font-family-2;
+						font-size: 15px;    
+                  font-weight: $font-weight4;
+                  margin: 0;
+                  width: 60%;
+                  overflow: hidden;
+                  text-overflow: ellipsis;                   
                 }
                 .price {
-                    @extend %p;
-                    font-weight: $font-weight1;                                                            
+						font-family: $font-family-2;
+						font-size: 15px;    	  
+                  font-weight: $font-weight1;                                                            
                 }                         
             }                    
         } 
         .order {            
             display: inline-block; 
-            width: 59px;
-            height: 69px;
+            width: 69px;
+            height: 70px;
             border: solid $--Green;  
             background-color: $--Green;
             border-radius: 0 15px 15px 0; 
-            margin-right: -60px; 
+            margin-right: -69px; 
             transition: all .2s ease-out;
 
             .fa-check {   
@@ -152,7 +141,7 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 50px;
-                margin: 18px 14px;   
+                margin: 20px 20px;   
             }    
         }                    
     }
@@ -161,7 +150,7 @@
 .btn_commande {
     margin-top: 28px;
     display: flex;
-    align-self: center;
+    justify-content: center;
 
         button {
             @extend %btn;

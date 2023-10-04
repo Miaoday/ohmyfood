@@ -6,8 +6,6 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Raleway:wght@700&family=Roboto&family=Roboto+Flex:wght@100;300;600&family=Roboto+Serif:ital@1&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/f95507b400.js" crossorigin="anonymous"></script>
     <title>ohmyfood</title>
 </head>
@@ -15,14 +13,12 @@
     
     <!-- Loader -->
     <section class="loader">
-        <div class="loader_container">
-            <div class="loader_logo">Ohmyfood
-                <i class="fa-solid fa-truck-fast"></i>
-            </div>           
-            <div class="loader_circle"></div>
-            <div class="loader_circle"></div>
-            <div class="loader_circle"></div>
-        </div>
+      <div class="loader_logo">Ohmyfood
+        <i class="loader_fa fa-solid fa-truck-fast"></i>
+      </div>           
+      <div class="loader_circle"></div>
+      <div class="loader_circle"></div>
+      <div class="loader_circle"></div>     
     </section>
     <!-- Header --> 
     <header class="header">
@@ -70,87 +66,89 @@
         <!-- restaurants -->
         <section class="resto">
             <h1>Restaurants</h1>
+
             <div class="resto_list">
-                <article class="resto_card">
-                    <a href="Restaurants/la_palette_du_gout.html" class="resto_card_link">
-                        <div class="resto_card_img">
-                            <span class="newtag">Nouveau</span>
-                            <img src="./Images_et_ textes_ Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo_du_restaurant_La_Palette_du_gout">
-                        </div>
-                        <div class="resto_card_content">
-                            <div class="resto_card_txt">
-                                <h2 class="h2-bold">La palette du goût</h2>                    
-                                <h3>Ménilmontant</h3> 
-                            </div>
-                            <span class="heart">
-                                <input type="checkbox" id="heart" class="heart_checkbox" />
-                                <label for="heart" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-lg"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-lg"></i>
-                                </label> 
-                            </span>
-                        </div>                           
-                    </a>
+                <!-- Cards -->    
+                <article class="card">
+                  <a href="Restaurants/la_palette_du_gout.html">
+                    <div class="card_picture">                   
+                      <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/la_palette_du_gout.jpg" alt="Photo_du_restaurant_La_Palette_du_gout">
+                      <span class="newtag">Nouveau</span>
+                    </div>
+                    <div class="card_content">
+                      <div class="card_txt">
+                        <h2 class="h2-bold">La palette du goût</h2>                    
+                        <h3>Ménilmontant</h3> 
+                      </div>
+                    </div>
+                  </a>
+                  <span class="heart">
+                    <input type="checkbox" id="heart1" class="heart_checkbox" />
+                    <label for="heart1" class="heart_label">
+                      <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                      <i class="fa_full fa-solid fa-heart fa-xl"></i>
+                    </label> 
+                  </span>                                                         
                 </article>
 
-                <article class="resto_card">
+                <article class="card">
                     <a href="Restaurants/la_note_enchantee.html" class="resto_card_link">
-                        <div class="resto_card_img">
-                            <span class="newtag">Nouveau</span>
-                            <img src="./Images_et_ textes_ Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="Photo_du_restaurant_La_note_enchantee">
+                        <div class="card_picture">
+                          <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/la_note_enchantee.jpg" alt="Photo_du_restaurant_La_note_enchantee">
+                          <span class="newtag">Nouveau</span>
                         </div>
-                        <div class="resto_card_content">
-                            <div class="resto_card_txt">
-                                <h2 class="h2-bold">La note enchantée</h2>                   
-                                <h3>Charonne</h3>
-                            </div>
-                            <span class="heart">
-                                <input type="checkbox" id="heart" class="heart_checkbox">
-                                <label for="heart" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-lg"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-lg"></i>
+                        <div class="card_content">
+                          <div class="card_txt">
+                            <h2 class="h2-bold">La note enchantée</h2>                   
+                            <h3>Charonne</h3>
+                          </div>
+                          <span class="heart">
+                                <input type="checkbox" id="heart2" class="heart_checkbox">
+                                <label for="heart2" class="heart_label">
+                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
                                 </label> 
                             </span>
                         </div>
                     </a>
                 </article>
 
-                <article class="resto_card">
-                    <a href="Restaurants/a_la_francaise.html" class="resto_card_link">
-                        <div class="resto_card_img">
-                            <img src="./Images_et_ textes_ Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Photo_du_restaurant_A_la_francaise">
+                <article class="card">
+                    <a href="Restaurants/a_la_francaise.html">
+                        <div class="card_picture">
+                            <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/a_la_francaise.jpg" alt="Photo_du_restaurant_A_la_francaise">
                         </div>
-                        <div class="resto_card_content">
-                            <div class="resto_card_txt">
+                        <div class="card_content">
+                            <div class="card_txt">
                                 <h2 class="h2-bold">À la française</h2>                    
                                 <h3>Cité Rouge</h3>
                             </div> 
                             <span class="heart">
-                                <input type="checkbox" id="heart" class="heart_checkbox">
-                                <label for="heart" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-lg"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-lg"></i>
+                                <input type="checkbox" id="heart3" class="heart_checkbox">
+                                <label for="heart3" class="heart_label">
+                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
                                 </label> 
                             </span>
                         </div>
                     </a>
                 </article>
 
-                <article class="resto_card">
-                    <a href="Restaurants/le_delice_des_sens.html" class="resto_card_link">
-                        <div class="resto_card_img">
-                            <img src="./Images_et_ textes_ Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Photo_du_restaurant_Le_delice_des_sens">
+                <article class="card">
+                    <a href="Restaurants/le_delice_des_sens.html">
+                        <div class="card_picture">
+                            <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/le_delice_des_sens.jpg" alt="Photo_du_restaurant_Le_delice_des_sens">
                         </div>
-                        <div class="resto_card_content">
-                            <div class="resto_card_txt">
+                        <div class="card_content">
+                            <div class="card_txt">
                                 <h2 class="h2-bold">Le délice des sens</h2>                   
                                 <h3>Folie-Méricourt</h3>   
                             </div> 
                             <span class="heart">
-                                <input type="checkbox" id="heart" class="heart_checkbox">
-                                <label for="heart" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-lg"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-lg"></i>
+                                <input type="checkbox" id="heart4" class="heart_checkbox">
+                                <label for="heart4" class="heart_label">
+                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
                                 </label> 
                             </span>        
                         </div> 

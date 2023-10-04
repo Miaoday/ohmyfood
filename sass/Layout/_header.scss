@@ -27,7 +27,7 @@
         cursor: pointer;
     }
 
-    @include media-query("desktop-up") {
+    @include desktop-medium {
 
         &_logo {
             width: 200px;
