@@ -1,12 +1,10 @@
 /* ANIMATION loader MainPage */   
 @keyframes loader {
     0% {
-        opacity: 1;
-        
+        opacity: 1;       
     }
     30% {
-        opacity:0.8;
-        
+        opacity:0.8;    
     }
     50% {
         opacity: 0.7;
@@ -22,28 +20,21 @@
 @keyframes driving_on {
     0% {
         transform: translateX(-300%);
-        transition-property: all 1s;      
     }  
     30% {
         transform: translateX(-80%);
-        transition-property: all 1s;      
     }  
     50% {
         transform: translateX(-50%);
-        transition-property: all 1s;
     }
     70% {
         transform: translateX(-30%);
-        transition-property: all 1s;
     }
     90% {
-        transform: translateX(-15%);
-        transition-property: all 1s;                
+        transform: translateX(-15%);         
     }
     100% {
         transform: translateX(-5%);
-        transition-property: all 1s;
-                 
     }
 }
 
@@ -80,18 +71,31 @@
     }
 }
 
-/* ANIMATION Rolling checked on MenuPage */ 
-@keyframes slide_down {
+
+
+/* ANIMATION menu download on MenuPage */ 
+@keyframes download {
     from {
-        transform: translateX(60%);
+        transform: translateY(-30%);
         opacity: 0;
     }
     to {
-        transform: translateX(0%);
+        transform: translateY(0%);
         opacity: 1;
     }   
 }
 @mixin loading_menu {
-    opacity: 0;
-    animation: slide_down 8s linear;
+    .entrees {
+    animation-delay: .1s;
+    animation: download 1s ease-in;
+    }
+    .plats {
+        animation-delay: .2s;
+        animation: download 1s ease-in;
+    }
+    .desserts {
+        animation-delay: .3s;
+        animation: download 1s ease-in;
+
+    }
 }

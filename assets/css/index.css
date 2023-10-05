@@ -104,15 +104,14 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 5;
-  animation: loader 4s ease-in-out;
+  top: 0;
+  animation: loader 3s ease-in-out forwards;
   opacity: 0;
 }
 .loader_logo {
   font-size: 40px;
   display: flex;
   text-align: center;
-  z-index: 10;
   background-image: linear-gradient(155deg, #9356dc -11.44%, #ff79da 123.93%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -139,7 +138,6 @@ li {
   border-radius: 50px;
   margin: 10px;
   background-image: linear-gradient(-111deg, #9356dc -11.44%, #ff79da 123.93%);
-  animation-timing-function: steps(5, jump-start);
 }
 
 .card {
@@ -152,7 +150,7 @@ li {
   margin-bottom: 18px;
   position: relative;
   cursor: pointer;
-  box-shadow: 0px 4px 15px 0px black 0, 0, 0, 0.1;
+  box-shadow: 1px 4px 15px 1px black 0, 0, 0, 0.1;
 }
 @media screen and (min-width: 1024px) {
   .card {
@@ -368,12 +366,11 @@ input[text] {
 }
 
 .resto_menu {
+  max-width: 1920px;
   background-color: #F6F6F6;
   border-radius: 45px 45px 0px 0px;
   padding: 31px 17px 0;
-  position: relative;
-  bottom: 40px;
-  max-width: 1920px;
+  margin-top: -40px;
 }
 @media screen and (min-width: 768px) {
   .resto_menu {
@@ -408,6 +405,7 @@ input[text] {
 .meals_list {
   width: 100%;
   overflow: hidden;
+  animation: loading_menu 1s forwards;
 }
 .meals_list_title {
   font-family: "Roboto", sans-serif;
@@ -495,9 +493,9 @@ input[text] {
 }
 
 .btn_commande {
-  margin-top: 28px;
   display: flex;
   justify-content: center;
+  padding: 40px;
 }
 .btn_commande button {
   padding: 16px 48px 15px 49px;
@@ -600,27 +598,21 @@ input[text] {
 @keyframes driving_on {
   0% {
     transform: translateX(-300%);
-    transition-property: all 1s;
   }
   30% {
     transform: translateX(-80%);
-    transition-property: all 1s;
   }
   50% {
     transform: translateX(-50%);
-    transition-property: all 1s;
   }
   70% {
     transform: translateX(-30%);
-    transition-property: all 1s;
   }
   90% {
     transform: translateX(-15%);
-    transition-property: all 1s;
   }
   100% {
     transform: translateX(-5%);
-    transition-property: all 1s;
   }
 }
 @keyframes bounce {
@@ -651,14 +643,14 @@ input[text] {
     box-shadow: 10px 10px 0.5px #7E7E7E;
   }
 }
-/* ANIMATION Rolling checked on MenuPage */
-@keyframes slide_down {
+/* ANIMATION menu download on MenuPage */
+@keyframes download {
   from {
-    transform: translateX(60%);
+    transform: translateY(-30%);
     opacity: 0;
   }
   to {
-    transform: translateX(0%);
+    transform: translateY(0%);
     opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */

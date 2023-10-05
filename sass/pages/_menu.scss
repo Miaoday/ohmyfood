@@ -8,12 +8,12 @@
 
 //Menu Card*//
 .resto_menu {
+   max-width: 1920px;
    background-color: $--third-color;
    border-radius: 45px 45px 0px 0px;
    padding: 31px 17px 0;
-   position: relative;
-   bottom: 40px;  
-   max-width: 1920px;
+   margin-top: -40px;
+   
 
    @include tab {
       margin-left: 13%;
@@ -51,7 +51,12 @@
 .meals_list {
 
    width: 100%;
-   overflow: hidden;
+   overflow: hidden;  
+   animation: loading_menu 1s forwards;
+   
+
+
+
 
    &_title {
    	font-family: $font-family-2;
@@ -146,10 +151,11 @@
     }
 }   
   
+
 .btn_commande {
-    margin-top: 28px;
     display: flex;
     justify-content: center;
+    padding: 40px;
 
         button {
             @extend %btn;
