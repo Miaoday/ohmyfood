@@ -166,7 +166,7 @@ li {
   height: 170px;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
-  object-position: 50% 60%;
+  object-position: 50% 62%;
 }
 .card_picture .newtag {
   font-family: "Roboto", sans-serif;
@@ -362,6 +362,7 @@ input[text] {
   max-width: 1920px;
   height: 275px;
   object-fit: cover;
+  object-position: 50% 68%;
 }
 
 .resto_menu {
