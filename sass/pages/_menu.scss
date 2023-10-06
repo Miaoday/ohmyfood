@@ -95,7 +95,9 @@
         overflow: hidden;
 
         &:hover .order {        
-            margin-right: 0%;    
+
+            margin-right: 0%; 
+
             .fa-check {
                 transform: rotate(-360deg);   
                 transition: 2s ease-in-out;  
@@ -135,6 +137,7 @@
                   overflow: hidden;
                   text-overflow: ellipsis;                   
                 }
+
                 .price {
 						font-family: $font-family-2;
 						font-size: 15px;    	  
@@ -142,6 +145,7 @@
                 }                         
             }                    
         } 
+
         .order {            
             display: inline-block; 
             width: 59px;
@@ -161,13 +165,13 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 50px;
-                margin: 20px 20px;   
+                margin: 20px 15px;   
             }    
         }                    
     }
 
    &.entrees {
-   animation-delay: 1.5s;
+   animation-delay: 0.2s;
    }
 
    &.plats {
@@ -175,7 +179,7 @@
    }
 
    &.desserts {
-   animation-delay: 0.5s;
+   animation-delay: 1.5s;
    }   
 }
 
@@ -184,7 +188,7 @@
    justify-content: center;
    padding: 40px;
 
-   .btn_h4 {
+   .btn_h5 {
 
       padding: 16px 48px 15px 49px;
  

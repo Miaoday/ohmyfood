@@ -1,183 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="https://kit.fontawesome.com/f95507b400.js" crossorigin="anonymous"></script>
-    <title>ohmyfood</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <script src="https://kit.fontawesome.com/f95507b400.js" crossorigin="anonymous"></script>
+   <title>ohmyfood</title>
 </head>
-<body>
-    
-    <!-- Loader -->
-    <section class="loader">
-      <div class="loader_logo">Ohmyfood
-        <i class="fa-solid fa-truck-fast"></i>
-      </div>           
-      <div class="loader_circle"></div>
-      <div class="loader_circle"></div>
-      <div class="loader_circle"></div>     
-    </section>
-    <!-- Header --> 
-    <header class="header">
-        <h1 class="header_logo">Ohmyfood</h1>
-    </header>  
-    <!-- location -->  
-    <section class="location">
-        <div class="location-title">
-            <i class="fa-solid fa-location-dot";></i>
-            <input type="text" class="h4" name="nom-de-lieu" id="nom-de-lieu" placeholder="Paris, Belleville">
-        </div>
-    </section> 
-    <main class="main-container">
-        <!-- introduction -->       
-        <section class="intro">
-            <h1>Réservez le menu qui vous convient</h1>
-            <h2 class="h2-light">Découvrez des restaurants d’exception, sélectionnés par nos soins.</h2>
-            <button class="btn_h4">
-            Explorer nos restaurants
-            </button>
-        </section>
+<body> 
+   <!-- Header --> 
+   <header class="header">
+      <h1 class="header_logo">Ohmyfood</h1>
+   </header>  
+   <!-- location -->  
+   <div class="location">
+      <div class="location-title">
+         <i class="fa-solid fa-location-dot"></i>
+         <input type="text" class="h4" name="nom-de-lieu" id="nom-de-lieu" placeholder="Paris, Belleville">
+      </div>
+   </div> 
+   <main class="main-container">
+	<!-- introduction -->       
+   <section class="intro">
+   	<h2>Réservez le menu qui vous convient</h2>
+      <h3>Découvrez des restaurants d’exception, sélectionnés par nos soins.</h3>
+      <button class="btn_h5">
+      Explorer nos restaurants
+      </button>
+   </section>
 
-        <!-- operation -->
-        <section class="operation">
-            <h1>Fonctionnement</h1>   
-            <div class="operation_steps">
-                <div class="operation_step1">
-                    <p class="numbs">1</p>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <p class="h4">Choisissez un restaurant</p>
-                </div>
-                <div class="operation_step2">
-                    <p class="numbs">2</p>
-                    <i class="fa-solid fa-list-ul""></i>
-                    <p class="h4">Composez votre menu</p>
-                </div>
-                <div class="operation_step3">
-                    <p class="numbs">3</p>
-                    <i class="fa-solid fa-store"></i>
-                    <p class="h4">Dégustez au restaurant</p>
-                </div>
-            </div>
-        </section>
+	 <!-- operation -->
+   <section class="operation">
+      <h2>Fonctionnement</h2>   
+      	<div class="operation_steps">
+            <div class="operation_step1">
+               <p class="numbs">1</p>
+               <i class="fa-solid fa-mobile-screen-button"></i>
+               <p class="h5">Choisissez un restaurant</p>
+         	</div>
+         	<div class="operation_step2">
+            	<p class="numbs">2</p>
+            	<i class="fa-solid fa-list-ul"></i>
+            	<p class="h5">Composez votre menu</p>
+         	</div>
+         	<div class="operation_step3">
+            	<p class="numbs">3</p>
+            	<i class="fa-solid fa-store"></i>
+         		<p class="h5">Dégustez au restaurant</p>
+         	</div>
+         </div>
+   </section>
 
-        <!-- restaurants -->
-        <section class="resto">
-            <h1>Restaurants</h1>
+   <!-- restaurants -->
+   <section class="resto">
+      <h2>Restaurants</h2>
+      <div class="resto_list">	
+      <!-- Cards -->    
+      	<article class="card">
+            <a href="restaurants/la_palette_du_gout.html">
+               <div class="card_picture">                   
+               <img src="./assets/images_et_textes_ohmyfood/images/restaurants/la_palette_du_gout.jpg" alt="Photo_du_restaurant_La_Palette_du_gout">
+               	<span class="newtag">Nouveau</span>
+               </div>
+               <div class="card_content">
+                  <div class="card_txt">
+                     <h4 class="h2-bold">La palette du goût</h4>                    
+                     <h5>Ménilmontant</h5> 
+                  </div>
+               </div>
+            </a>
+            <span class="heart">
+               <input type="checkbox" id="heart1" class="heart_checkbox">
+               <label for="heart1" class="heart_label">
+                  <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                  <i class="fa_full fa-solid fa-heart fa-xl"></i>
+               </label> 
+            </span>                                                         
+         </article>
 
-            <div class="resto_list">
-                <!-- Cards -->    
-                <article class="card">
-                  <a href="restaurants/la_palette_du_gout.html">
-                    <div class="card_picture">                   
-                      <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/la_palette_du_gout.jpg" alt="Photo_du_restaurant_La_Palette_du_gout">
-                      <span class="newtag">Nouveau</span>
-                    </div>
-                    <div class="card_content">
-                      <div class="card_txt">
-                        <h2 class="h2-bold">La palette du goût</h2>                    
-                        <h3>Ménilmontant</h3> 
-                      </div>
-                    </div>
-                  </a>
-                  <span class="heart">
-                    <input type="checkbox" id="heart1" class="heart_checkbox" />
-                    <label for="heart1" class="heart_label">
-                      <i class="fa_empty fa-regular fa-heart fa-xl"></i>
-                      <i class="fa_full fa-solid fa-heart fa-xl"></i>
-                    </label> 
-                  </span>                                                         
-                </article>
+         <article class="card">
+            <a href="restaurants/la_note_enchantee.html">
+               <div class="card_picture">
+               <img src="./assets/images_et_textes_ohmyfood/images/restaurants/la_note_enchantee.jpg" alt="Photo_du_restaurant_La_note_enchantee">
+                  <span class="newtag">Nouveau</span>
+               </div>
+               <div class="card_content">
+                  <div class="card_txt">
+                     <h4 class="h2-bold">La note enchantée</h4>                   
+                     <h5>Charonne</h5>
+               	</div>
+					</div>
+				</a>
+            <span class="heart">
+               <input type="checkbox" id="heart2" class="heart_checkbox">
+               <label for="heart2" class="heart_label">
+            		<i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                  <i class="fa_full fa-solid fa-heart fa-xl"></i>
+               </label> 
+            </span>     
+         </article>
 
-                <article class="card">
-                    <a href="restaurants/la_note_enchantee.html">
-                        <div class="card_picture">
-                          <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/la_note_enchantee.jpg" alt="Photo_du_restaurant_La_note_enchantee">
-                          <span class="newtag">Nouveau</span>
-                        </div>
-                        <div class="card_content">
-                          <div class="card_txt">
-                            <h2 class="h2-bold">La note enchantée</h2>                   
-                            <h3>Charonne</h3>
-                          </div>
-                          <span class="heart">
-                                <input type="checkbox" id="heart2" class="heart_checkbox">
-                                <label for="heart2" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
-                                </label> 
-                            </span>
-                        </div>
-                    </a>
-                </article>
+         <article class="card">
+            <a href="restaurants/a_la_francaise.html">
+               <div class="card_picture">
+               <img src="./assets/images_et_textes_ohmyfood/images/restaurants/a_la_francaise.jpg" alt="Photo_du_restaurant_A_la_francaise">
+               </div>
+               <div class="card_content">
+                  <div class="card_txt">
+                     <h4 class="h2-bold">À la française</h4>                    
+                  	<h5>Cité Rouge</h5>
+                  </div> 
+					</div>
+				</a>
+            <span class="heart">
+               <input type="checkbox" id="heart3" class="heart_checkbox">
+               <label for="heart3" class="heart_label">
+               	<i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                  <i class="fa_full fa-solid fa-heart fa-xl"></i>
+               </label> 
+            </span>        
+         </article>
 
-                <article class="card">
-                    <a href="restaurants/a_la_francaise.html">
-                        <div class="card_picture">
-                            <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/a_la_francaise.jpg" alt="Photo_du_restaurant_A_la_francaise">
-                        </div>
-                        <div class="card_content">
-                            <div class="card_txt">
-                                <h2 class="h2-bold">À la française</h2>                    
-                                <h3>Cité Rouge</h3>
-                            </div> 
-                            <span class="heart">
-                                <input type="checkbox" id="heart3" class="heart_checkbox">
-                                <label for="heart3" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
-                                </label> 
-                            </span>
-                        </div>
-                    </a>
-                </article>
-
-                <article class="card">
-                    <a href="restaurants/le_delice_des_sens.html">
-                        <div class="card_picture">
-                            <img src="./assets/Images_et_ textes_ Ohmyfood/images/restaurants/le_delice_des_sens.jpg" alt="Photo_du_restaurant_Le_delice_des_sens">
-                        </div>
-                        <div class="card_content">
-                            <div class="card_txt">
-                                <h2 class="h2-bold">Le délice des sens</h2>                   
-                                <h3>Folie-Méricourt</h3>   
-                            </div> 
-                            <span class="heart">
-                                <input type="checkbox" id="heart4" class="heart_checkbox">
-                                <label for="heart4" class="heart_label">
-                                    <i class="fa_empty fa-regular fa-heart fa-xl"></i>
-                                    <i class="fa_full fa-solid fa-heart fa-xl"></i>
-                                </label> 
-                            </span>        
-                        </div> 
-                    </a>
-                </article>
-            </div>
-        </section>
-    </main>
+         <article class="card">
+            <a href="restaurants/le_delice_des_sens.html">
+               <div class="card_picture">
+               <img src="./assets/images_et_textes_ohmyfood/images/restaurants/le_delice_des_sens.jpg" alt="Photo_du_restaurant_Le_delice_des_sens">
+               </div>
+               <div class="card_content">
+                  <div class="card_txt">
+                     <h4 class="h2-bold">Le délice des sens</h4>                   
+                     <h5>Folie-Méricourt</h5>   
+                  </div> 
+					</div>
+				</a>
+            <span class="heart">
+            	<input type="checkbox" id="heart4" class="heart_checkbox">
+               <label for="heart4" class="heart_label">
+                  <i class="fa_empty fa-regular fa-heart fa-xl"></i>
+                  <i class="fa_full fa-solid fa-heart fa-xl"></i>
+               </label> 
+            </span>        	
+         </article>
+		</div>       
+   </section>
+   </main>
     <!-- Footer -->
     <footer class="f">
         
-        <h2 class="h2-normal">Ohmyfood</h2>
+        <h3 class="h3-normal">Ohmyfood</h3>
         
         <ul class="f_content">
-            <li class="h4">     
+            <li class="h5">     
                 <i class="fa-solid fa-utensils fa-xs" style="color: #ffffff;"></i>
                 <span>Proposer un restaurant</span>
             </li>
-            <li class="h4">
+            <li class="h5">
                 <i class="fa-solid fa-handshake-angle fa-2xs" style="color: #fafafa;"></i>  
                 <span>Devenir partenaire</span>
             </li>
-            <li class="h4">
+            <li class="h6">
                 Mentions légales
-            <li class="h4">
+            <li class="h6">
                 Contact
             </li>
         </ul>
-    </footer>
+   </footer>
+	<!-- Loader -->
+	<div class="loader">
+		<div class="loader_logo">Ohmyfood
+			<i class="fa-solid fa-truck-fast"></i>
+		</div>           
+		<div class="loader_circle"></div>
+		<div class="loader_circle"></div>
+		<div class="loader_circle"></div>     
+	</div>
 
    
 </body>
