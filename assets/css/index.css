@@ -34,7 +34,7 @@
   margin: 0;
 }
 
-.btn_commande button, .intro .btn_h4 {
+.btn_h4 {
   color: white;
   border-radius: 25px;
   background: linear-gradient(193deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -46,7 +46,7 @@
   opacity: 2;
 }
 
-.btn_commande button:hover, .intro .btn_h4:hover {
+.btn_h4:hover {
   box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.4);
   opacity: 0.9;
   transform: scale(1.01);
@@ -206,7 +206,10 @@ li {
   -webkit-text-fill-color: transparent;
 }
 .heart .heart_checkbox:checked + .heart_label .fa_full {
-  opacity: 1;
+  opacity: 0.9;
+  transform: scaleXY(0.8);
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in;
 }
 
 .fa-location-dot {
@@ -366,6 +369,9 @@ input[text] {
 }
 
 .resto_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 1920px;
   background-color: #F6F6F6;
   border-radius: 45px 45px 0px 0px;
@@ -381,7 +387,6 @@ input[text] {
 @media screen and (min-width: 1440px) {
   .resto_menu {
     width: 1055px;
-    margin: auto;
   }
 }
 
@@ -392,20 +397,47 @@ input[text] {
   text-align: start;
   margin: 0;
 }
+@media screen and (min-width: 1024px) {
+  .resto_title h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .resto_title .heart {
   display: flex;
 }
 .resto_title .heart .fa_empty,
 .resto_title .heart .fa_full {
   position: absolute;
-  top: 50px;
-  right: 46px;
+  top: 352px;
+}
+@media screen and (min-width: 768px) {
+  .resto_title .heart .fa_empty,
+  .resto_title .heart .fa_full {
+    top: 348px;
+    right: 154px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .resto_title .heart .fa_empty,
+  .resto_title .heart .fa_full {
+    top: 348px;
+    right: 336px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .resto_title .heart .fa_empty,
+  .resto_title .heart .fa_full {
+    right: 500px;
+  }
 }
 
 .meals_list {
   width: 100%;
   overflow: hidden;
-  animation: loading_menu 1s forwards;
+  transform: translateY(30px);
+  animation: download 2s forwards;
 }
 .meals_list_title {
   font-family: "Roboto", sans-serif;
@@ -418,6 +450,7 @@ input[text] {
 }
 .meals_list_option {
   background-color: white;
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
   border-radius: 15px;
   display: flex;
   height: 69px;
@@ -472,8 +505,8 @@ input[text] {
 }
 .meals_list_option .order {
   display: inline-block;
-  width: 69px;
-  height: 70px;
+  width: 59px;
+  height: 69px;
   border: solid #99E2D0;
   background-color: #99E2D0;
   border-radius: 0 15px 15px 0;
@@ -491,15 +524,25 @@ input[text] {
   border-radius: 50px;
   margin: 20px 20px;
 }
+.meals_list.entrees {
+  animation-delay: 1.5s;
+}
+.meals_list.plats {
+  animation-delay: 1s;
+}
+.meals_list.desserts {
+  animation-delay: 0.5s;
+}
 
 .btn_commande {
   display: flex;
   justify-content: center;
   padding: 40px;
 }
-.btn_commande button {
+.btn_commande .btn_h4 {
   padding: 16px 48px 15px 49px;
 }
+
 /**** Header ****/
 .header {
   background-color: white;
@@ -646,11 +689,11 @@ input[text] {
 /* ANIMATION menu download on MenuPage */
 @keyframes download {
   from {
-    transform: translateY(-30%);
+    transform: translateY(30px);
     opacity: 0;
   }
   to {
-    transform: translateY(0%);
+    transform: translateY(0);
     opacity: 1;
   }
 }/*# sourceMappingURL=index.css.map */

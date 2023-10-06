@@ -76,26 +76,12 @@
 /* ANIMATION menu download on MenuPage */ 
 @keyframes download {
     from {
-        transform: translateY(-30%);
+        transform: translateY(30px);
         opacity: 0;
     }
     to {
-        transform: translateY(0%);
+        transform: translateY(0);
         opacity: 1;
     }   
 }
-@mixin loading_menu {
-    .entrees {
-    animation-delay: .1s;
-    animation: download 1s ease-in;
-    }
-    .plats {
-        animation-delay: .2s;
-        animation: download 1s ease-in;
-    }
-    .desserts {
-        animation-delay: .3s;
-        animation: download 1s ease-in;
-
-    }
-}
+  

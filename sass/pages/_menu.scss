@@ -8,32 +8,38 @@
 
 //Menu Card*//
 .resto_menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
    max-width: 1920px;
    background-color: $--third-color;
    border-radius: 45px 45px 0px 0px;
    padding: 31px 17px 0;
    margin-top: -40px;
    
-
    @include tab {
       margin-left: 13%;
    	margin-right: 13%;
    }
 
    @include desktop-large {
-      width: 1055px;
-      margin: auto;       
-   }
+      width: 1055px; 
+   }   
 }
 
-.resto_title {
-	
+.resto_title {	
    h2 {      
    	font-size: 28px;
    	font-family: $font-family-1;
    	font-weight: $font-weight3;
       text-align: start;
       margin: 0; 
+
+      @include desktop-medium {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
    }
 
    .heart {
@@ -42,22 +48,31 @@
       .fa_empty, 
 		.fa_full {
 			position: absolute;
-			top: 50px;
-			right: 46px;
+			top: 352px;
+			
+         @include tab {
+            top: 348px;
+            right: 154px;
+         }
+
+         @include desktop-medium {
+            top: 348px;
+            right: 336px;
+         }
+
+         @include desktop-large {
+            right: 500px;
+         }
       }
    }
 }
 
 .meals_list {
-
    width: 100%;
    overflow: hidden;  
-   animation: loading_menu 1s forwards;
+   transform: translateY(30px);
+   animation: download 2s forwards;
    
-
-
-
-
    &_title {
    	font-family: $font-family-2;
     	font-size: 16px;
@@ -70,6 +85,7 @@
 
    &_option {
         background-color: $--forth-color;
+        box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
         border-radius: 15px;
         display: flex;             
         height: 69px;
@@ -128,8 +144,8 @@
         } 
         .order {            
             display: inline-block; 
-            width: 69px;
-            height: 70px;
+            width: 59px;
+            height: 69px;
             border: solid $--Green;  
             background-color: $--Green;
             border-radius: 0 15px 15px 0; 
@@ -149,24 +165,30 @@
             }    
         }                    
     }
-}   
-  
+
+   &.entrees {
+   animation-delay: 1.5s;
+   }
+
+   &.plats {
+   animation-delay: 1s;
+   }
+
+   &.desserts {
+   animation-delay: 0.5s;
+   }   
+}
 
 .btn_commande {
-    display: flex;
-    justify-content: center;
-    padding: 40px;
+   display: flex;
+   justify-content: center;
+   padding: 40px;
 
-        button {
-            @extend %btn;
-            padding: 16px 48px 15px 49px;
-            
-            &:hover {
-                @extend %btn-animated          
-            }
-        }
+   .btn_h4 {
+
+      padding: 16px 48px 15px 49px;
+ 
+   }
 } 
-
-
 
 

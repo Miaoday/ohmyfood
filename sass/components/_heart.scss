@@ -29,7 +29,10 @@
   .heart_checkbox:checked + .heart_label {
 
     .fa_full {
-    opacity: 1;
+    opacity: .9;
+    transform: scaleXY(0.8);
+    transition-duration: 1000ms;
+    transition-timing-function: ease-in;
     }
   }
 
