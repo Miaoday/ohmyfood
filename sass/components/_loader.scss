@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;       
     top: 0;  
-    animation: loader 2.5s ease-in-out forwards;
+    animation: loader 5s ease-in-out forwards;
     
 
     &_logo { 
@@ -19,7 +19,7 @@
         display: flex;
         text-align: center;
         
-        background-image: linear-gradient(
+        background: linear-gradient(
         155deg,  #9356dc -11.44%,
         #ff79da 123.93%
         );
@@ -27,10 +27,8 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         
-        
-        
         i {
-            background-image: linear-gradient(
+            background: linear-gradient(
             190deg,  #9356dc -11.44%,
             #ff79da 123.93%
             );
@@ -38,7 +36,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-inline-start: 20px;
-            animation: driving_on  1s linear;
+            animation: departure 1s linear;
 
             i::before{
                 content: " ";
@@ -49,16 +47,37 @@
             }
         }       
     } 
+}
 
-    &_circle {
+.loader_circle {
         width: 20px;
         height: 20px;
         border-radius: 50px;
         margin: 10px;
-        background-image: linear-gradient(-111deg,  #9356dc -11.44%,
-        #ff79da 123.93%);   
+        background: linear-gradient(-111deg,  #9356dc -11.44%,
+        #ff79da 123.93%); 
+        position: relative;
+        top: 0;  
+
+        &.ball1 {
+            animation: bounce 2s infinite;
+            animation-delay: 0.5s;
+            animation: jump 5s linear;
+        }
+
+        &.ball2 {
+            animation: bounce 3s infinite;
+            animation-delay: 1s;
+            /*animation: departure 1.5s linear;*/
+        }
+
+        &.ball3 {
+            animation: bounce 4s infinite;
+            animation-delay: 1.5s;
+            /*animation: departure 2.5s linear;*/
            
+        }
     }
 
-}
+
     
