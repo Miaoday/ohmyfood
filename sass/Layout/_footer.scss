@@ -5,6 +5,10 @@
     padding: 22px 25px;
     position: sticky;
 
+    a {
+        color: $--forth-color;
+    }
+
     .h3-normal {
       font-family: $font-family-1;
       font-size: 18px;
@@ -23,12 +27,6 @@
       font-weight: $font-weight2;
       color: $--forth-color;
       margin: 7px 0;
-    }
-
-    .h6 {
-        a {
-            color: $--forth-color;
-        }
     }
 
     @include desktop-medium {

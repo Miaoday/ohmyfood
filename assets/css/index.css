@@ -597,6 +597,9 @@ input[text] {
   padding: 22px 25px;
   position: sticky;
 }
+.f a {
+  color: white;
+}
 .f .h3-normal {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
@@ -613,9 +616,6 @@ input[text] {
   font-weight: 500;
   color: white;
   margin: 7px 0;
-}
-.f .h6 a {
-  color: white;
 }
 @media screen and (min-width: 1024px) {
   .f {
