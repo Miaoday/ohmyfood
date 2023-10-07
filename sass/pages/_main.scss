@@ -154,13 +154,11 @@ input {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr; 
-
          
         @include desktop-medium  {     
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 25% 25%;
-            gap: 100px;          
+            gap: 50px 100px;          
         }
     }    
 }  

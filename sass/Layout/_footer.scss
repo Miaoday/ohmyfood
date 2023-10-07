@@ -25,6 +25,12 @@
       margin: 7px 0;
     }
 
+    .h6 {
+        a {
+            color: $--forth-color;
+        }
+    }
+
     @include desktop-medium {
         & {
         height: 114px;

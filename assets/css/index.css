@@ -172,7 +172,7 @@ li {
 }
 @media screen and (min-width: 1024px) {
   .card {
-    margin-bottom: 100px;
+    box-shadow: 1px 4px 15px 1px black 0, 0, 0, 0.1;
   }
 }
 .card_picture {
@@ -370,8 +370,7 @@ input[text] {
   .resto_list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 25% 25%;
-    gap: 100px;
+    gap: 50px 100px;
   }
 }
 
@@ -614,6 +613,9 @@ input[text] {
   font-weight: 500;
   color: white;
   margin: 7px 0;
+}
+.f .h6 a {
+  color: white;
 }
 @media screen and (min-width: 1024px) {
   .f {
