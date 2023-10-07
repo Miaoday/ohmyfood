@@ -16,15 +16,16 @@
    border-radius: 45px 45px 0px 0px;
    padding: 31px 17px 0;
    margin-top: -40px;
-   
-   @include tab {
-      margin-left: 13%;
-   	margin-right: 13%;
-   }
 
    @include desktop-large {
-      width: 1055px; 
+      margin-left: 13.5%;
+   	margin-right: 13.5%
    }   
+
+   @include widescreen {
+      margin-left: 22.5%;
+      margin-right: 22.5%;
+   }
 }
 
 .resto_title {	

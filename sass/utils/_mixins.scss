@@ -31,14 +31,14 @@
 }
 
 @mixin desktop-large {
-  @media screen and (min-width: map-get($breakpoints, desktop-down)){
-      @content;
-  }
+    @media screen and (min-width: map-get($breakpoints, desktop-down)){
+        @content;
+    }
 }
 
 @mixin widescreen {
-@media screen and (min-width: map-get(1920px, widescreen-up)){
-    @content;
-}
+    @media screen and (min-width: map-get($breakpoints, widescreen-up)){
+        @content;
+    }
 }
 

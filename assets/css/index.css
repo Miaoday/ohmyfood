@@ -392,15 +392,16 @@ input[text] {
   padding: 31px 17px 0;
   margin-top: -40px;
 }
-@media screen and (min-width: 768px) {
-  .resto_menu {
-    margin-left: 13%;
-    margin-right: 13%;
-  }
-}
 @media screen and (min-width: 1440px) {
   .resto_menu {
-    width: 1055px;
+    margin-left: 13.5%;
+    margin-right: 13.5%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .resto_menu {
+    margin-left: 22.5%;
+    margin-right: 22.5%;
   }
 }
 
