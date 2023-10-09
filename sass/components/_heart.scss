@@ -1,13 +1,12 @@
-
 /**  HEART  **/   
+//**main page**//
 .heart {    
 
   &_checkbox {
     display:none;
   }
 
-  .fa_empty, .fa_full {
-    
+  .fa_empty, .fa_full {    
     cursor: pointer;
     position: absolute;
     bottom: 45px;
@@ -30,13 +29,13 @@
 
     .fa_full {
     opacity: .9;
-    transform: scale3d(1, 1, 1);
+    transform: matrix(1, 0, 0, 1, 0, 0);
     transition-duration: 1000ms;
     transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57);
     }
   }
 }
-
+//**menu page**//
 .resto_title {
   .heart {
 		display: flex;
