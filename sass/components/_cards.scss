@@ -12,10 +12,10 @@
     margin-bottom: 18px;
     position: relative;
     cursor: pointer; 
-    box-shadow: 1px 4px 15px 1px $--fifth-color(0, 0, 0, 0.10);
+    box-shadow: 1px 14px 15px 1px $--fifth-color(0, 0, 0, 5);
     
     @include desktop-medium { 
-        box-shadow: 1px 4px 15px 1px $--fifth-color(0, 0, 0, 0.10);
+        box-shadow: 1px 14px 15px 1px $--fifth-color(0, 0, 0, 15);
     }
 
     &_picture {     
