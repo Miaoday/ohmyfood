@@ -53,16 +53,16 @@
 			
          @include tab {
             top: 348px;
-            right: 154px;
+            right: 55px;
          }
 
          @include desktop-medium {
             top: 348px;
-            right: 336px;
+            right: 345px;
          }
 
          @include desktop-large {
-            right: 500px;
+            right: 560px;
          }
       }
    }
@@ -181,21 +181,18 @@
    margin-right: -69px; 
    transition: all 250ms ease-out;
 
-            .fa-check {   
-                color: $--Green;
-                background-color: $--forth-color;
-                width: 25px;
-                height: 25px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50px;
-                margin: 20px 15px;   
-            }    
-        }                    
-    
-
-   
+   .fa-check {   
+      color: $--Green;
+      background-color: $--forth-color;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      margin: 20px 15px;   
+   }    
+}                     
 }
 
 .btn_commande {

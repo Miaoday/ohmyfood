@@ -431,20 +431,20 @@ input[text] {
   .resto_title .heart .fa_empty,
   .resto_title .heart .fa_full {
     top: 348px;
-    right: 154px;
+    right: 55px;
   }
 }
 @media screen and (min-width: 1024px) {
   .resto_title .heart .fa_empty,
   .resto_title .heart .fa_full {
     top: 348px;
-    right: 336px;
+    right: 345px;
   }
 }
 @media screen and (min-width: 1440px) {
   .resto_title .heart .fa_empty,
   .resto_title .heart .fa_full {
-    right: 500px;
+    right: 560px;
   }
 }
 
