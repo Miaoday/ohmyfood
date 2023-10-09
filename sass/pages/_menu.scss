@@ -29,42 +29,20 @@
 }
 
 .resto_title {	
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   @include desktop-medium {     
+      justify-content: center;
+   }
+
    h2 {      
    	font-size: 28px;
    	font-family: $font-family-1;
    	font-weight: $font-weight3;
       text-align: start;
       margin: 0; 
-
-      @include desktop-medium {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-      }
-   }
-
-   .heart {
-		display: flex;
-		
-      .fa_empty, 
-		.fa_full {
-			position: absolute;
-			top: 352px;
-			
-         @include tab {
-            top: 348px;
-            right: 55px;
-         }
-
-         @include desktop-medium {
-            top: 348px;
-            right: 345px;
-         }
-
-         @include desktop-large {
-            right: 560px;
-         }
-      }
    }
 }
 
@@ -85,7 +63,7 @@
    &.desserts {
       animation-delay: 1.5s;
    }   
-   
+
    &_title {
    	font-family: $font-family-2;
     	font-size: 16px;
@@ -108,21 +86,20 @@
       overflow: hidden;
 
       &:hover {
-         transform: scale(1) translateY(1%);
+         transform: scale(1) translateY(5%);
       }
 
       &:hover .order {        
-
          margin-right: 0%; 
-/*
-            .fa-check {
+
+         /*   .fa-check {
                 transform: rotate(-360deg);   
                 transition: 2s ease-in-out;  
-            } 
-            */
+            }  */
+           
       }  
-
    }    
+}  
 
 .content {
 
@@ -193,7 +170,6 @@
       margin: 20px 15px;   
    }    
 }                     
-}
 
 .btn_commande {
    display: flex;

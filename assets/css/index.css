@@ -225,9 +225,27 @@ li {
 }
 .heart .heart_checkbox:checked + .heart_label .fa_full {
   opacity: 0.9;
-  transform: scaleXY(0.8);
+  transform: scale3d(1, 1, 1);
   transition-duration: 1000ms;
-  transition-timing-function: ease-in;
+  transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57);
+}
+
+.resto_title .heart {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.resto_title .heart .fa_empty,
+.resto_title .heart .fa_full {
+  position: absolute;
+  top: -2px;
+  right: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .resto_title .heart .fa_empty,
+  .resto_title .heart .fa_full {
+    left: 2px;
+  }
 }
 
 .fa-location-dot {
@@ -405,47 +423,22 @@ input[text] {
   }
 }
 
+.resto_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1024px) {
+  .resto_title {
+    justify-content: center;
+  }
+}
 .resto_title h2 {
   font-size: 28px;
   font-family: "Shrikhand", cursive;
   font-weight: 400;
   text-align: start;
   margin: 0;
-}
-@media screen and (min-width: 1024px) {
-  .resto_title h2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.resto_title .heart {
-  display: flex;
-}
-.resto_title .heart .fa_empty,
-.resto_title .heart .fa_full {
-  position: absolute;
-  top: 352px;
-}
-@media screen and (min-width: 768px) {
-  .resto_title .heart .fa_empty,
-  .resto_title .heart .fa_full {
-    top: 348px;
-    right: 55px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .resto_title .heart .fa_empty,
-  .resto_title .heart .fa_full {
-    top: 348px;
-    right: 345px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .resto_title .heart .fa_empty,
-  .resto_title .heart .fa_full {
-    right: 560px;
-  }
 }
 
 .meals_list {
@@ -484,18 +477,17 @@ input[text] {
   overflow: hidden;
 }
 .meals_list_option:hover {
-  transform: scale(1) translateY(1%);
+  transform: scale(1) translateY(5%);
 }
 .meals_list_option:hover .order {
   margin-right: 0%;
-  /*
-              .fa-check {
-                  transform: rotate(-360deg);   
-                  transition: 2s ease-in-out;  
-              } 
-              */
+  /*   .fa-check {
+         transform: rotate(-360deg);   
+         transition: 2s ease-in-out;  
+     }  */
 }
-.meals_list .content {
+
+.content {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -504,7 +496,7 @@ input[text] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.meals_list .content h3 {
+.content h3 {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
@@ -513,12 +505,12 @@ input[text] {
   text-overflow: ellipsis;
   width: 60%;
 }
-.meals_list .content .describe {
+.content .describe {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-.meals_list .content .describe p {
+.content .describe p {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
@@ -527,12 +519,13 @@ input[text] {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.meals_list .content .describe .price {
+.content .describe .price {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 700;
 }
-.meals_list .order {
+
+.order {
   display: inline-block;
   width: 59px;
   height: 69px;
@@ -542,7 +535,7 @@ input[text] {
   margin-right: -69px;
   transition: all 250ms ease-out;
 }
-.meals_list .order .fa-check {
+.order .fa-check {
   color: #99E2D0;
   background-color: white;
   width: 25px;
@@ -622,6 +615,9 @@ input[text] {
   font-weight: 500;
   color: white;
   margin: 7px 0;
+}
+.f .h5 i {
+  color: white;
 }
 @media screen and (min-width: 1024px) {
   .f {

@@ -30,12 +30,31 @@
 
     .fa_full {
     opacity: .9;
-    transform: scaleXY(0.8);
+    transform: scale3d(1, 1, 1);
     transition-duration: 1000ms;
-    transition-timing-function: ease-in;
+    transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57);
     }
   }
+}
 
+.resto_title {
+  .heart {
+		display: flex;
+    align-items: center;
+    position: relative;
+		
+    .fa_empty, 
+		.fa_full {
+
+		  position: absolute;
+      top: -2px; 
+			right: 30px;
+
+      @include desktop-medium {
+            left: 2px;
+      }
+    }
+  }
 }
 
 
