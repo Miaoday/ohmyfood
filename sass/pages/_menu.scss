@@ -71,8 +71,20 @@
 .meals_list {
    width: 100%;
    overflow: hidden;  
-   transform: translateY(30px);
+   transform: translateY(-30px);
    animation: download 2s forwards;
+
+   &.entrees {
+      animation-delay: 0.2s;
+   }
+   
+   &.plats {
+      animation-delay: 1s;
+   }
+   
+   &.desserts {
+      animation-delay: 1.5s;
+   }   
    
    &_title {
    	font-family: $font-family-2;
@@ -85,77 +97,89 @@
    }
 
    &_option {
-        background-color: $--forth-color;
-        box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
-        border-radius: 15px;
-        display: flex;             
-        height: 69px;
-        margin-bottom: 12px;
-        cursor: pointer;       
-        width: 100%;
-        overflow: hidden;
+      background-color: $--forth-color;
+      box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      display: flex;             
+      height: 69px;
+      margin-bottom: 12px;
+      cursor: pointer;       
+      width: 100%;
+      overflow: hidden;
 
-        &:hover .order {        
+      &:hover {
+         transform: scale(1) translateY(1%);
+      }
 
-            margin-right: 0%; 
+      &:hover .order {        
 
+         margin-right: 0%; 
+/*
             .fa-check {
                 transform: rotate(-360deg);   
                 transition: 2s ease-in-out;  
             } 
-        }  
-        
-        .content {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            */
+      }  
 
-            h3 {
-               font-family: $font-family-2;
-    				font-size: 18px;
-    				font-weight: $font-weight2;
-    				margin: 0;
-               overflow: hidden;
-               text-overflow: ellipsis;
-               width: 60%;
-            }
+   }    
 
-            .describe {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
+.content {
 
-                p {
-						font-family: $font-family-2;
-						font-size: 15px;    
-                  font-weight: $font-weight4;
-                  margin: 0;
-                  width: 60%;
-                  overflow: hidden;
-                  text-overflow: ellipsis;                   
-                }
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
 
-                .price {
-						font-family: $font-family-2;
-						font-size: 15px;    	  
-                  font-weight: $font-weight1;                                                            
-                }                         
-            }                    
-        } 
+   h3 {
+   
+      font-family: $font-family-2;
+      font-size: 18px;
+    	font-weight: $font-weight2;
+    	margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 60%;
 
-        .order {            
-            display: inline-block; 
-            width: 59px;
-            height: 69px;
-            border: solid $--Green;  
-            background-color: $--Green;
-            border-radius: 0 15px 15px 0; 
-            margin-right: -69px; 
-            transition: all .2s ease-out;
+   }
+
+   .describe {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+		   font-family: $font-family-2;
+			font-size: 15px;    
+         font-weight: $font-weight4;
+         margin: 0;
+         width: 60%;
+         overflow: hidden;
+         text-overflow: ellipsis;                   
+      }
+
+      .price {
+			font-family: $font-family-2;
+			font-size: 15px;    	  
+         font-weight: $font-weight1;                                                            
+      }                         
+   }                    
+} 
+
+.order {   
+
+   display: inline-block; 
+   width: 59px;
+   height: 69px;
+   border: solid $--Green;  
+   background-color: $--Green;
+   border-radius: 0 15px 15px 0; 
+   margin-right: -69px; 
+   transition: all 250ms ease-out;
 
             .fa-check {   
                 color: $--Green;
@@ -169,19 +193,9 @@
                 margin: 20px 15px;   
             }    
         }                    
-    }
+    
 
-   &.entrees {
-   animation-delay: 0.2s;
-   }
-
-   &.plats {
-   animation-delay: 1s;
-   }
-
-   &.desserts {
-   animation-delay: 1.5s;
-   }   
+   
 }
 
 .btn_commande {
