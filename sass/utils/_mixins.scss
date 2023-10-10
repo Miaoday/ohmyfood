@@ -1,0 +1,44 @@
+
+//---Banner---//
+@mixin banner-images {
+    
+  width: 100%;
+  max-width: 1920px;
+  height: 275px;
+  object-fit: cover;
+  object-position: 50% 68%;
+  
+}
+
+//-- Mixin Media Queries--//
+
+@mixin phone {
+    @media screen and (min-width: map-get($breakpoints, phone-down)){
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (min-width: map-get($breakpoints, tablet-down)){
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media screen and (min-width: map-get($breakpoints, desktop-up)){
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media screen and (min-width: map-get($breakpoints, desktop-down)){
+        @content;
+    }
+}
+
+@mixin widescreen {
+    @media screen and (min-width: map-get($breakpoints, widescreen-up)){
+        @content;
+    }
+}
+

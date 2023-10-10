@@ -1,14 +1,20 @@
+/**** Footer *****/
 
-//*Footer*//
 .f {
     background-color: $--Grey;
     padding: 22px 25px;
     position: sticky;
 
-    .h2-normal {
-        font-family: $font-family-1;
+    a {
         color: $--forth-color;
-        margin: 0;
+    }
+
+    .h3-normal {
+      font-family: $font-family-1;
+      font-size: 18px;
+      font-weight: $font-weight3;
+      color: $--forth-color;
+      margin: 0;
     }
 
     &_content {
@@ -16,14 +22,18 @@
         padding: 0;        
     }
 
-    .h4 {
-        font-family: $font-family-2;
-        font-weight: $font-weight2;
+   .h5 {
+      font-family: $font-family-2;
+      font-weight: $font-weight2;
+      color: $--forth-color;
+      margin: 7px 0;
+
+      i {
         color: $--forth-color;
-        margin: 7px 0;
+      }
     }
 
-    @include media-query("desktop-up") {
+    @include desktop-medium {
         & {
         height: 114px;
         display: flex;
@@ -31,7 +41,7 @@
         align-items: flex-end;       
         }
 
-        .h2-normal {
+        .h3-normal {
             font-family: $font-family-1;
             color: $--forth-color;
             margin: 0 16px;
@@ -43,7 +53,7 @@
             gap: 7px;
         }
 
-        .h4 {
+        .h5 {
             margin: 7px;
         }
     }

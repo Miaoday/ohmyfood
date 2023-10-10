@@ -1,0 +1,186 @@
+//**** Menu Page ****//
+//***banner image***//
+.banner {
+   img {
+   	@include banner-images;
+   }
+}
+
+//Menu Card*//
+.resto_menu {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 1920px;
+   background-color: $--third-color;
+   border-radius: 45px 45px 0px 0px;
+   padding: 31px 17px 0;
+   margin-top: -40px;
+
+   @include desktop-large {
+      margin-left: 13.5%;
+   	margin-right: 13.5%
+   }   
+
+   @include widescreen {
+      margin-left: 22.5%;
+      margin-right: 22.5%;
+   }
+}
+
+.resto_title {	
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   @include desktop-medium {     
+      justify-content: center;
+   }
+
+   h2 {      
+   	font-size: 28px;
+   	font-family: $font-family-1;
+   	font-weight: $font-weight3;
+      text-align: start;
+      margin: 0; 
+   }
+}
+
+.meals_list {
+   width: 100%;
+   overflow: hidden;  
+   transform: translateY(-30px);
+   animation: download 2s forwards;
+
+   &.entrees {
+      animation-delay: 0.2s;
+   }
+   
+   &.plats {
+      animation-delay: 1s;
+   }
+   
+   &.desserts {
+      animation-delay: 1.5s;
+   }   
+
+   &_title {
+   	font-family: $font-family-2;
+    	font-size: 16px;
+    	font-weight: $font-weight4;
+      border-bottom: 3px solid $--Green;
+      width: 40px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+   }
+
+   &_option {
+      background-color: $--forth-color;
+      box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      display: flex;             
+      height: 69px;
+      margin-bottom: 12px;
+      cursor: pointer;       
+      width: 100%;
+      overflow: hidden;
+
+      &:hover {
+         transform: scale(1) translateY(5%);
+      }
+
+      &:hover .order {        
+         margin-right: 0%; 
+
+         /*   .fa-check {
+                transform: rotate(-360deg);   
+                transition: 2s ease-in-out;  
+            }  */
+           
+      }  
+   }    
+}  
+
+.content {
+
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   padding: 15px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+
+   h3 {
+   
+      font-family: $font-family-2;
+      font-size: 18px;
+    	font-weight: $font-weight2;
+    	margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 60%;
+
+   }
+
+   .describe {
+
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      p {
+		   font-family: $font-family-2;
+			font-size: 15px;    
+         font-weight: $font-weight4;
+         margin: 0;
+         width: 60%;
+         overflow: hidden;
+         text-overflow: ellipsis;                   
+      }
+
+      .price {
+			font-family: $font-family-2;
+			font-size: 15px;    	  
+         font-weight: $font-weight1;                                                            
+      }                         
+   }                    
+} 
+
+.order {   
+
+   display: inline-block; 
+   width: 59px;
+   height: 69px;
+   border: solid $--Green;  
+   background-color: $--Green;
+   border-radius: 0 15px 15px 0; 
+   margin-right: -69px; 
+   transition: all 250ms ease-out;
+
+   .fa-check {   
+      color: $--Green;
+      background-color: $--forth-color;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50px;
+      margin: 20px 15px;   
+   }    
+}                     
+
+.btn_commande {
+   display: flex;
+   justify-content: center;
+   padding: 40px;
+
+   .btn_h5 {
+
+      padding: 16px 48px 15px 49px;
+ 
+   }
+} 
+
+

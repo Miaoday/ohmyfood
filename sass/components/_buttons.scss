@@ -1,0 +1,8 @@
+//*** Main page Button ***//
+.btn_h5 {
+    @extend %btn;       
+
+    &:hover {
+        @extend %btn-animated;       
+    }
+}
