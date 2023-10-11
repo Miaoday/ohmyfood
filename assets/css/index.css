@@ -443,17 +443,6 @@ input[text] {
 .meals_list {
   width: 100%;
   overflow: hidden;
-  transform: translateY(-30px);
-  animation: download 2s forwards;
-}
-.meals_list.entrees {
-  animation-delay: 0.2s;
-}
-.meals_list.plats {
-  animation-delay: 1s;
-}
-.meals_list.desserts {
-  animation-delay: 1.5s;
 }
 .meals_list_title {
   font-family: "Roboto", sans-serif;
@@ -474,6 +463,35 @@ input[text] {
   cursor: pointer;
   width: 100%;
   overflow: hidden;
+  transform: translateY(-20px);
+  animation: download 0.5s both;
+}
+.meals_list_option.a {
+  animation-delay: 0.2s;
+}
+.meals_list_option.b {
+  animation-delay: 0.4s;
+}
+.meals_list_option.c {
+  animation-delay: 0.6s;
+}
+.meals_list_option.d {
+  animation-delay: 0.8s;
+}
+.meals_list_option.e {
+  animation-delay: 1s;
+}
+.meals_list_option.g {
+  animation-delay: 1.2s;
+}
+.meals_list_option.j {
+  animation-delay: 1.4s;
+}
+.meals_list_option.k {
+  animation-delay: 1.6s;
+}
+.meals_list_option.l {
+  animation-delay: 1.8s;
 }
 .meals_list_option:hover {
   transform: scale(1) translateY(5%);
@@ -707,7 +725,7 @@ input[text] {
 /* ANIMATION menu download on MenuPage */
 @keyframes download {
   from {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   to {
