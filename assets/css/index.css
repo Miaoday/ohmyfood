@@ -173,11 +173,11 @@ li {
   margin-bottom: 18px;
   position: relative;
   cursor: pointer;
-  box-shadow: 1px 14px 15px 1px black 0, 0, 0, 1;
+  box-shadow: 1px 14px 15px 1px black 1;
 }
 @media screen and (min-width: 1024px) {
   .card {
-    box-shadow: 2px 6px 12px 2px black 0, 0, 0, 0.4;
+    box-shadow: 2px 6px 12px 2px black 0.4;
   }
 }
 .card_picture {
