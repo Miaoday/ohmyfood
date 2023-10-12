@@ -1,7 +1,7 @@
 
 /* Loader at Index.html */  
 .loader {
-    font-family: $font-family-1;
+    
     background: $--fifth-color; 
     position: fixed  ;
     width: 100%; 
@@ -15,6 +15,8 @@
     
 
     &_logo { 
+        font-family: $font-family-1;
+        font-weight: $font-weight1;
         font-size: 40px;
         display: flex;
         text-align: center;
@@ -44,6 +46,7 @@
                 right: 0;
                 top: 0;
                 animation: bounce 0.5s ease-in-out infinite;
+                
             }
         }       
     } 
@@ -58,11 +61,13 @@
         #ff79da 123.93%); 
         position: relative;
         top: 0;  
+        animation: departure 1s 1s linear infinite;
 
         &.ball1 {
             animation: bounce 2s infinite;
             animation-delay: 0.5s;
-            animation: jump 5s linear;
+            animation: jump 5s linear infinite;
+            animation: departure 1s 1s linear;
         }
 
         &.ball2 {
