@@ -1,7 +1,6 @@
 
 /* Loader at Index.html */  
 .loader {
-    
     background: $--fifth-color; 
     position: fixed  ;
     width: 100%; 
@@ -46,7 +45,6 @@
                 right: 0;
                 top: 0;
                 animation: bounce 0.5s ease-in-out infinite;
-                
             }
         }       
     } 
@@ -82,7 +80,6 @@
             animation-delay: 1.5s;
             animation: departure 2.5s linear;
             animation: jump 1s 0.25s linear infinite;
-           
         }
     }
 
