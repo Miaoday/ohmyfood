@@ -96,7 +96,6 @@ li {
 
 /* Loader at Index.html */
 .loader {
-  font-family: "Shrikhand", cursive;
   background: black;
   position: fixed;
   width: 100%;
@@ -109,6 +108,8 @@ li {
   animation: loader 5s ease-in-out forwards;
 }
 .loader_logo {
+  font-family: "Shrikhand", cursive;
+  font-weight: 700;
   font-size: 40px;
   display: flex;
   text-align: center;
@@ -141,21 +142,25 @@ li {
   background: linear-gradient(-111deg, #9356dc -11.44%, #ff79da 123.93%);
   position: relative;
   top: 0;
+  animation: departure 1s 1s linear infinite;
+  animation: jump 1s linear infinite;
 }
 .loader_circle.ball1 {
   animation: bounce 2s infinite;
   animation-delay: 0.5s;
-  animation: jump 5s linear;
+  animation: jump 1s linear infinite;
 }
 .loader_circle.ball2 {
   animation: bounce 3s infinite;
   animation-delay: 1s;
-  /*animation: departure 1.5s linear;*/
+  animation: departure 1.5s linear;
+  animation: jump 1s 0.5s linear infinite;
 }
 .loader_circle.ball3 {
   animation: bounce 4s infinite;
   animation-delay: 1.5s;
-  /*animation: departure 2.5s linear;*/
+  animation: departure 2.5s linear;
+  animation: jump 1s 0.25s linear infinite;
 }
 
 .card {
@@ -168,11 +173,11 @@ li {
   margin-bottom: 18px;
   position: relative;
   cursor: pointer;
-  box-shadow: 1px 14px 15px 1px black 0, 0, 0, 5;
+  box-shadow: 1px 14px 15px 1px rgba(0, 0, 0, 0.1);
 }
 @media screen and (min-width: 1024px) {
   .card {
-    box-shadow: 1px 14px 15px 1px black 0, 0, 0, 15;
+    box-shadow: 2px 6px 12px 2px rgba(0, 0, 0, 0.1);
   }
 }
 .card_picture {
@@ -443,17 +448,6 @@ input[text] {
 .meals_list {
   width: 100%;
   overflow: hidden;
-  transform: translateY(-30px);
-  animation: download 2s forwards;
-}
-.meals_list.entrees {
-  animation-delay: 0.2s;
-}
-.meals_list.plats {
-  animation-delay: 1s;
-}
-.meals_list.desserts {
-  animation-delay: 1.5s;
 }
 .meals_list_title {
   font-family: "Roboto", sans-serif;
@@ -474,16 +468,41 @@ input[text] {
   cursor: pointer;
   width: 100%;
   overflow: hidden;
+  transform: translateY(-20px);
+  animation: download 0.5s both;
+}
+.meals_list_option.dish-1 {
+  animation-delay: 0.2s;
+}
+.meals_list_option.dish-2 {
+  animation-delay: 0.4s;
+}
+.meals_list_option.dish-3 {
+  animation-delay: 0.6s;
+}
+.meals_list_option.dish-4 {
+  animation-delay: 0.8s;
+}
+.meals_list_option.dish-5 {
+  animation-delay: 1s;
+}
+.meals_list_option.dish-6 {
+  animation-delay: 1.2s;
+}
+.meals_list_option.dish-7 {
+  animation-delay: 1.4s;
+}
+.meals_list_option.dish-8 {
+  animation-delay: 1.6s;
+}
+.meals_list_option.dish-9 {
+  animation-delay: 1.8s;
 }
 .meals_list_option:hover {
   transform: scale(1) translateY(5%);
 }
 .meals_list_option:hover .order {
   margin-right: 0%;
-  /*   .fa-check {
-         transform: rotate(-360deg);   
-         transition: 2s ease-in-out;  
-     }  */
 }
 
 .content {
@@ -651,9 +670,6 @@ input[text] {
   50% {
     opacity: 0.7;
   }
-  70% {
-    opacity: 0.5;
-  }
   100% {
     opacity: 0;
     visibility: hidden;
@@ -698,7 +714,7 @@ input[text] {
     transform: translateY(0);
   }
   40% {
-    transform: traslateY(-30px);
+    transform: translateY(-30px);
   }
   60% {
     transform: translateY(-15px);
@@ -707,7 +723,7 @@ input[text] {
 /* ANIMATION menu download on MenuPage */
 @keyframes download {
   from {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
     opacity: 0;
   }
   to {

@@ -1,7 +1,6 @@
 
 /* Loader at Index.html */  
 .loader {
-    font-family: $font-family-1;
     background: $--fifth-color; 
     position: fixed  ;
     width: 100%; 
@@ -15,6 +14,8 @@
     
 
     &_logo { 
+        font-family: $font-family-1;
+        font-weight: $font-weight1;
         font-size: 40px;
         display: flex;
         text-align: center;
@@ -58,24 +59,27 @@
         #ff79da 123.93%); 
         position: relative;
         top: 0;  
+        animation: departure 1s 1s linear infinite;
+        animation: jump 1s linear infinite;
 
         &.ball1 {
             animation: bounce 2s infinite;
             animation-delay: 0.5s;
-            animation: jump 5s linear;
+            animation: jump 1s linear infinite;
         }
 
         &.ball2 {
             animation: bounce 3s infinite;
             animation-delay: 1s;
-            /*animation: departure 1.5s linear;*/
+            animation: departure 1.5s linear;
+            animation: jump 1s 0.5s linear infinite;
         }
 
         &.ball3 {
             animation: bounce 4s infinite;
             animation-delay: 1.5s;
-            /*animation: departure 2.5s linear;*/
-           
+            animation: departure 2.5s linear;
+            animation: jump 1s 0.25s linear infinite;
         }
     }
 
