@@ -105,7 +105,7 @@ li {
   justify-content: center;
   align-items: center;
   top: 0;
-  animation: loader 5s ease-in-out forwards;
+  animation: loader 3s ease-in-out both;
 }
 .loader_logo {
   font-family: "Shrikhand", cursive;
@@ -232,7 +232,12 @@ li {
   opacity: 0.9;
   transform: matrix(1, 0, 0, 1, 0, 0);
   transition-duration: 1000ms;
-  transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) both;
+  transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) alternate;
+}
+.heart .heart_checkbox:checked + .heart_label .fa_empty {
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  transition-duration: 1000ms;
+  transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) alternate;
 }
 
 .resto_title .heart {
@@ -460,7 +465,7 @@ input[text] {
 }
 .meals_list_option {
   background-color: white;
-  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.04);
   border-radius: 15px;
   display: flex;
   height: 69px;
@@ -470,6 +475,12 @@ input[text] {
   overflow: hidden;
   transform: translateY(-20px);
   animation: download 0.5s both;
+}
+.meals_list_option:hover {
+  box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.08);
+}
+.meals_list_option:hover .order {
+  margin-right: 0%;
 }
 .meals_list_option.dish-1 {
   animation-delay: 0.2s;
@@ -497,12 +508,6 @@ input[text] {
 }
 .meals_list_option.dish-9 {
   animation-delay: 1.8s;
-}
-.meals_list_option:hover {
-  transform: scale(1) translateY(5%);
-}
-.meals_list_option:hover .order {
-  margin-right: 0%;
 }
 
 .content {
