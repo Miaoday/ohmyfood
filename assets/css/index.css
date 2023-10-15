@@ -13,7 +13,7 @@
   border-radius: 20px;
   background-color: #F6F6F6;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
-  padding: 28px 0px 28px 0px;
+  padding: 22px 0px 20px 0px;
 }
 
 .operation .numbs {
@@ -167,7 +167,7 @@ li {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 251px;
+  height: 250px;
   background-color: white;
   border-radius: 15px;
   margin-bottom: 18px;
@@ -591,7 +591,7 @@ input[text] {
   width: 197px;
   height: 36px;
   padding: 0px 19px 0px 16px;
-  margin: 14px 90px 13px;
+  margin: 14px 90px 16px;
 }
 .header i {
   width: 30px;
