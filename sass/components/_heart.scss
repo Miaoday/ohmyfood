@@ -28,17 +28,10 @@
   .heart_checkbox:checked + .heart_label {
 
     .fa_full {
-    opacity: .9;
+    opacity: 0.9;
     transform: matrix(1, 0, 0, 1, 0, 0);
     transition-duration: 1000ms;
-    transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) alternate;
-    }
-    .fa_empty {
-    
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    transition-duration: 1000ms;
-    transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) alternate;
-
+    transition-timing-function: cubic-bezier(0.18, -0.38, 0.75, 1.57) both;
     }
   }
 }
