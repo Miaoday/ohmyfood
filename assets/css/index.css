@@ -108,8 +108,6 @@ li {
   animation: loader 3s ease-in both;
 }
 .loader_logo {
-  font-family: "Shrikhand", cursive;
-  font-weight: 300;
   font-size: 30px;
   display: flex;
   text-align: center;
@@ -681,7 +679,7 @@ input[text] {
     transform: translateX(-15%);
   }
   100% {
-    transform: translateX(-5%);
+    transform: translateX(-2%);
   }
 }
 @keyframes jump {
