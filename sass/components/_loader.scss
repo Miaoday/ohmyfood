@@ -11,9 +11,7 @@
     top: 0;  
     animation: loader 3s ease-in both;
 
-    &_logo { 
-        font-family: $font-family-1;
-        font-weight: $font-weight4;
+    &_logo {  
         font-size: 30px;
         display: flex;
         text-align: center;        
