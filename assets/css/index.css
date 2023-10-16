@@ -105,7 +105,7 @@ li {
   justify-content: center;
   align-items: center;
   top: 0;
-  animation: loader 3s ease-in-out both;
+  animation: loader 3s ease-in both;
 }
 .loader_logo {
   font-family: "Shrikhand", cursive;
@@ -124,14 +124,13 @@ li {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-inline-start: 20px;
-  animation: departure 1s linear;
+  animation: departure 2500ms linear;
 }
 .loader_logo i i::before {
   content: " ";
   position: absolute;
   right: 0;
   top: 0;
-  animation: bounce 0.5s ease-in-out infinite;
 }
 
 .loader_circle {
@@ -142,25 +141,18 @@ li {
   background: linear-gradient(-111deg, #9356dc -11.44%, #ff79da 123.93%);
   position: relative;
   top: 0;
-  animation: departure 1s 1s linear infinite;
-  animation: jump 1s linear infinite;
 }
 .loader_circle.ball1 {
-  animation: bounce 2s infinite;
   animation-delay: 0.5s;
-  animation: jump 1s linear infinite;
+  animation: jump 1s 0.5s infinite;
 }
 .loader_circle.ball2 {
-  animation: bounce 3s infinite;
   animation-delay: 1s;
-  animation: departure 1.5s linear;
-  animation: jump 1s 0.5s linear infinite;
+  animation: jump 1s 0.7s infinite;
 }
 .loader_circle.ball3 {
-  animation: bounce 4s infinite;
   animation-delay: 1.5s;
-  animation: departure 2.5s linear;
-  animation: jump 1s 0.25s linear infinite;
+  animation: jump 1s 1s infinite;
 }
 
 .card {
@@ -662,13 +654,10 @@ input[text] {
 /* ANIMATION loader MainPage */
 @keyframes loader {
   0% {
+    opacity: 2;
+  }
+  80% {
     opacity: 1;
-  }
-  30% {
-    opacity: 0.8;
-  }
-  50% {
-    opacity: 0.7;
   }
   100% {
     opacity: 0;
@@ -693,20 +682,6 @@ input[text] {
   }
   100% {
     transform: translateX(-5%);
-  }
-}
-@keyframes bounce {
-  0% {
-    transform: scale(1, 0.7);
-  }
-  40% {
-    transform: scale(0.8, 1.2);
-  }
-  60% {
-    transform: scale(1, 1);
-  }
-  100% {
-    bottom: 140px;
   }
 }
 @keyframes jump {
