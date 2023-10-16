@@ -1,8 +1,7 @@
-
 /* Loader at Index.html */  
 .loader {
     background: $--fifth-color; 
-    position: fixed  ;
+    position: fixed;
     width: 100%; 
     height: 100%;
     display: flex;
@@ -10,7 +9,7 @@
     justify-content: center;
     align-items: center;       
     top: 0;  
-    animation: loader 3s ease-in-out both;
+    animation: loader 3s ease-in both;
 
     &_logo { 
         font-family: $font-family-1;
@@ -25,8 +24,7 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
-    
+      
         i {
             background: linear-gradient(
             190deg,  #9356dc -11.44%,
@@ -36,17 +34,15 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-inline-start: 20px;
-            animation: departure 1s linear;
-
+            
+            animation: departure 2500ms linear;
+        
             i::before{
                 content: " ";
                 position: absolute;
                 right: 0;
-                top: 0;
-                animation: bounce 0.5s ease-in-out infinite;
-            }
-
-            
+                top: 0;             
+            }        
         }       
     } 
 }
@@ -60,27 +56,25 @@
         #ff79da 123.93%); 
         position: relative;
         top: 0;  
-        animation: departure 1s 1s linear infinite;
-        animation: jump 1s linear infinite;
 
         &.ball1 {
-            animation: bounce 2s infinite;
-            animation-delay: 0.5s;
-            animation: jump 1s linear infinite;
+            
+            animation-delay: 0.5s;       
+            animation: jump 1s 0.5s infinite;
+                    
         }
 
         &.ball2 {
-            animation: bounce 3s infinite;
-            animation-delay: 1s;
-            animation: departure 1.5s linear;
-            animation: jump 1s 0.5s linear infinite;
+            
+            animation-delay: 1s;         
+            animation: jump 1s 0.7s infinite;
         }
 
         &.ball3 {
-            animation: bounce 4s infinite;
+            
             animation-delay: 1.5s;
-            animation: departure 2.5s linear;
-            animation: jump 1s 0.25s linear infinite;
+            animation: jump 1s 1s infinite;    
+            
         }
     }
 
