@@ -105,7 +105,6 @@ input {
 
 //***operation**//
 .operation {
-   height: 440px;
    margin: 48px 20px 68px;
 
    &_steps {
@@ -135,8 +134,7 @@ input {
          grid-template-columns: 1fr 1fr 1fr;
          gap: 40px;
          align-items: center;
-      }
-		
+      }	
     }
 }      
 
