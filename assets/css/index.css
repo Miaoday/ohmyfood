@@ -342,7 +342,6 @@ input[text] {
 }
 
 .operation {
-  height: 440px;
   margin: 48px 20px 68px;
 }
 .operation_steps {
@@ -353,7 +352,6 @@ input[text] {
 }
 @media screen and (min-width: 1024px) {
   .operation {
-    height: auto;
     margin: 50px 180px;
   }
   .operation_steps {
